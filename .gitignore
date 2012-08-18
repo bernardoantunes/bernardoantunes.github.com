@@ -168,3 +168,10 @@ pip-log.txt
 
 #Sass cache directory
 .sass-cache/
+
+###################
+## Jekyll
+###################
+
+#Generated site
+_site/
