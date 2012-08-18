@@ -1,0 +1,29 @@
+        <ul class="blog-posts content-items">
+          {% for post in posts limit: listing_limit %}
+            <li>
+                <article class="content-item blog-post">
+                    <header class="post-header">
+                        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                        <h2 class="value">{{ post.byline }}</h2>
+                    </header>
+                    <div class="post-metadata">
+                        <div class="metadata">{{ post.date | date: "%d %b %Y" }}</div>
+                        <p class="tags">
+                          {% unless no_category %}
+                            {% if post.category %}
+                                    <a href="/categories#{{ post.category | slugize }}">{{ post.category }}</a>
+                            {% endif %}
+                          {% endunless %}
+                        </p>
+                    </div>
+                    <div class="post-content">
+                        <p>{{ post.content | strip_html | truncatewords: 75 }} <a href="{{ post.url }}">[…]</a>
+                        </p>
+                    </div>
+                </article>
+            </li>  
+          {% endfor %}
+        </ul>
+
+
+

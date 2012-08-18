@@ -1,0 +1,808 @@
+﻿//To make big text
+//http://patorjk.com/software/taag/#p=display&h=0&v=0&f=Roman&t=960px
+
+/*
+*
+*  Margin, padding, and border resets
+*  except for form elements
+*
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+@import "compass/css3/border-radius"; //Nav menu.
+@import "compass/typography/lists/inline-block-list"; //Nav menu.
+@import "compass/typography/text/replacement"; //Footer icons.
+@import "compass/css3/columns"; //Home message.
+
+@import 'modular-scale';
+
+//TODO:
+// - Style the selection of the lines.
+
+/* ######################################################### */
+/*                         My Settings                       */
+
+//Lets activate the debug mode. ;)
+$grid-debug: false;
+
+//Where I define my site settings.
+$settings-colors-verydarkgray: #1A1C1D;
+$settings-colors-darkgray: #3f3e3d;
+$settings-colors-lightgray: rgb(123, 123, 123);
+$settings-colors-lightorange: #FFD8B5;
+$settings-colors-orange: #ffc383;
+$settings-colors-darkorange: rgb(255, 161, 62);
+$settings-colors-highlight: rgb(255, 255, 0);
+
+//Here I set the scale definitions.
+@function grid-modular-scale($multiple)
+{
+	@return modular-scale($multiple, 1 1.6, $golden $fourth);
+}
+
+/*
+*
+*  Six-column grid active
+*  ------------------------------------------------
+*  Margin   | #  1   2   3   4   5   6   |   Margin
+*    2%     | %  18  34  50  66  72  88  |     2%
+*
+*/
+
+a, a:visited {
+	text-decoration: none;
+	color: $settings-colors-darkorange;
+}
+
+a:hover {
+	color: $settings-colors-darkorange;
+	//text-decoration: underline;
+
+	//border-bottom:2px solid $settings-colors-darkorange;
+}
+
+.sociallink a, .sociallink a:visited {
+	text-decoration: none;
+	color: $settings-colors-verydarkgray;
+}
+
+
+h1, h2, h3, p.intro { 
+  text-rendering: optimizeLegibility; 
+}
+
+//Change the selection color.
+$text-selector-prefixes: ("-webkit-","-moz-", "-o-", "");
+@each $text-selector-prefix in $text-selector-prefixes {
+    ::#{$text-selector-prefix}selection {
+		background:$settings-colors-lightorange;
+    }
+}
+
+h1 > a, h1 > a:visited { color: $settings-colors-verydarkgray; }
+
+//Lets set the grid.
+body{
+	//Defines the settings for the grid to work with.
+	@include unitgs-set-grid-settings(
+		$number-of-columns: 25,
+		$number-of-active-columns: 24,
+		$font-size: 16,
+		$line-height: 1.6,
+		$gutter-ratio: 1);
+	//This function should be applied to the body.
+	@include unitgs-init-grid(1);
+
+    background-image: url('/img/Background.jpg');
+    background-repeat: repeat;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: $settings-colors-verydarkgray;
+}
+
+/* ######################################################### */
+/*                       Unit Grid System                     */
+
+//General page styles
+#page-content { @include grid-unit(); }
+
+.orangetext { color: $settings-colors-darkorange; }
+
+.highlight { background-color: $settings-colors-highlight; }
+
+.post-content {
+	img {
+		max-width: 100%;
+	}
+}
+
+//Navigation
+#mainnav {
+	@include grid-unit(5/6, last, $line-height: 3, $height: 2, $align: right, $margin-top: 1/4, $margin-bottom: 3/4);
+
+	ul {
+		@include inline-block-list;
+		float: right;
+		white-space:nowrap;
+	}
+
+	ul > li.current > a { 
+		@include border-radius(utils-units-convert-to-ems(5px));
+		background: $settings-colors-orange;
+	}
+
+	ul > li > a {
+		@include grid-line(0.85);	
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $settings-colors-darkgray;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
+}
+
+//Header
+#logoandname {
+	@include grid-unit(1/6, $height: 2, $container-type: container, $margin-top: 1/4, $margin-bottom: 3/4);
+	background-image: url('/img/NovoLogo.png');
+	background-repeat: no-repeat;
+	background-position: utils-calculate-gutter-width-in-ems() 0.55em;
+	text-decoration: none;
+	color: $settings-colors-verydarkgray;
+	overflow: hidden;
+}
+
+#headerName, #headerTitle {
+	display: block;
+	@include hide-text;
+}
+
+//Welcome message
+#welcomeMessage { @include grid-unit($container-type: container); }
+//, $margin-top: 1/2, $margin-bottom: 1/2
+#welcomeMessage > img { @include grid-unit($margin-left: 1/6, $margin-right: 1/6, $container-type: contained); }
+#welcomeMessage > div { @include grid-unit($container-type: contained, $margin-top: 1/2, $margin-bottom: 1/2); 	}
+#welcomeMessage > div > p { 
+	font-size: utils-units-convert-to-ems(84px);
+	line-height:1em;
+	color: $settings-colors-darkgray;
+}
+
+#introduction-text { @include grid-unit(); }
+
+//Footer
+#layout-footer { @include grid-unit($container-type: container, $margin-top: 1); }
+
+#layout-footer .sociallink {
+	@include grid-unit($font-size: 0.8, 1/6, "inner", $container-type: contained);
+	&:first { @include grid-unit($font-size: 0.8, 1/6, first, $container-type: contained); }
+	&:last { @include grid-unit($font-size: 0.8, 1/6, last, $container-type: contained); }
+}
+
+$icons: (linkedin, wordpress, twitter, youtube, google, facebook);
+@each $social in $icons {
+	.#{$social} {
+		display: block;
+		@include replace-text("/img/Social/#{$social}.png");
+	}
+}
+
+#layout-footer #copyright {
+	@include grid-unit($font-size: 0.8, $container-type: contained, $margin-bottom: 1);
+	text-align: center;
+	color: $settings-colors-darkgray;
+}
+
+// Blog Styles
+ul.blog-posts > li {
+	list-style-type: none;
+	//@include grid-unit();
+}
+
+.blog-post {
+	@include grid-unit();
+}
+
+.post-header > h1 {
+	@include grid-line(grid-modular-scale(2));
+	font-weight: normal;
+	font-style: italic;
+	//margin: (24/26*1em) 0 (36/26*1em);
+}
+
+.post-header > h2 {
+	display: none;
+}
+
+.metadata {
+	display: none;
+}
+
+p.tags {
+	@include grid-line(0.85, $padding-top: 0, $padding-bottom: 1);
+	color: $settings-colors-lightgray; 
+	&:before { color: $settings-colors-verydarkgray; content: "about "; }
+}
+
+.post-content {
+	
+	h1, h2 {
+
+		@include grid-line($font-size: grid-modular-scale(1), $line-height: 1.2, $padding-top: 1/3, $padding-bottom: 2/3);
+	    font-style: italic;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}
+
+	p {
+		@include grid-line($margin-bottom: 1);
+	}
+}
+
+#post-comments {
+	@include grid-unit($margin-top: 1, $container-type: both);
+}
+
+//Curriculum Vitae
+#cv-introtext {
+	@include grid-unit($font-size: grid-modular-scale(1));
+	color: $settings-colors-darkgray;
+}
+
+#cv-links {
+	@include grid-unit($margin-top: 1, $margin-bottom: 1, $container-type: container);
+
+	> ul {
+		@include grid-unit($container-type: contained);
+		list-style-type: none;
+	}
+}
+
+#linkedin-button {
+	@include grid-unit($margin-left: 1/6, $margin-right: 1/6, $margin-top: 1, $padding-top: 0.5, $padding-bottom: 0.5, $container-type: contained);
+	@include border-radius(utils-units-convert-to-ems(5px));
+	padding-left: utils-calculate-gutter-width-in-ems() + utils-units-convert-to-ems(16px + 12px);
+	background: url("/img/Social/linkedin.png") no-repeat scroll 12px center lightgray;//rgb(154, 152, 151);
+	background-size: 16px 16px;
+	color: $settings-colors-lightgray;
+	text-align: center;
+}
+
+#cv-skills-heading { @include grid-unit(); display: none; }
+#cv-skills-items { @include grid-unit(); display: none; }
+
+#cv-exp { }
+.cv-exp-title {
+	@include grid-unit($font-size: grid-modular-scale(6));
+	color: $settings-colors-darkgray;
+}
+.cv-exp-list { }
+.cv-exp-item { @include grid-unit($container-type: container); }
+.cv-exp-item-header { }
+.cv-exp-item-header-date {
+	@include grid-unit($container-type: contained);
+	color: $settings-colors-darkgray;
+}
+.cv-exp-item-header-company {
+	@include grid-unit($container-type: contained, $font-size: grid-modular-scale(4), $single-line-vertical-align: 1);
+	font-style: italic;
+	white-space:nowrap;
+}
+.cv-exp-item-header-role {
+	@include grid-unit($container-type: contained, $font-size: grid-modular-scale(1));
+	color: $settings-colors-lightgray;
+}
+.cv-exp-item-details {
+	@include grid-unit($container-type: contained, $margin-top: 1);
+}
+
+//
+// #########################################################
+//
+/* @media screen and min-width: utils-units-convert-to-ems(480px) */
+//
+//		      .o    .ooooo.     .oooo.                          
+//		    .d88   d88'   `8.  d8P'`Y8b                         
+//		  .d'888   Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		.d'  888    `88888b.  888    888  888' `88b  `88b..8P'  
+//		88ooo888oo .8'  ``88b 888    888  888   888    Y888'    
+//		     888   `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		    o888o   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+$void: debug-assert(utils-units-convert-to-ems(480px) == 30em,
+	"media query units conversion error",
+	"480px are #{utils-units-convert-to-ems(480px)}", error);
+@media screen and (min-width: 30em) {
+
+	//TODO:
+	//ClearColumn - a function that clear the definitions of a column and
+	//				makes it invisible with no with, etc.
+
+	//TODO:
+	//Issue - When we change the settings of a column, it is possible that
+	//		  it still contains remains from the previous configuration
+	//		  that might create some weird effects.
+
+	//General settings.
+	//Lets increase the scale 25%. Base font size from 16px to 20px.
+	body { @include unitgs-set-grid-scale($scale: 1.125); }
+
+	#mainnav {
+		@include grid-unit(5/6, last, $line-height: 3, $height: 2, $align: right, $margin-top: 0, $margin-bottom: 0);
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	#logoandname {
+		@include grid-unit(1/6, $height: 2, $container-type: container, $margin-top: 0, $margin-bottom: 0);
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	//Welcome message
+	#welcomeMessage { @include grid-unit($container-type: container, $margin-top: 1/2, $margin-bottom: 1/2); }
+	#welcomeMessage > img { @include grid-unit(1/3, first, $container-type: contained); }
+	#welcomeMessage > div {
+		@include grid-unit(2/3, last, $margin-top: 0, $margin-bottom: 0, $container-type: contained);
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#introduction-text { @include grid-unit($margin-top: 0);
+		margin-top: 0;
+	}
+
+	//Blog
+	.blog-post {
+		@include grid-unit($margin-top: 1/2, $margin-bottom: 1/2);
+	}
+
+
+	//Curriculum Vitae
+	#cv-introtext {
+		@include grid-unit($font-size: 1, $margin-top: 1/2, $margin-bottom: 1/2);
+	}
+
+	#cv-links {
+		@include grid-unit( $margin-top: 1/2, $margin-bottom: 1/2, $container-type: container);
+	}
+
+//	#linkedin-button {
+//		@include grid-unit($margin-left: 1/6, $margin-right: 1/6, $margin-top: 1, $padding-top: 0.5, $padding-bottom: 0.5, $container-type: contained);
+//	}
+
+	.cv-exp-item-header-role {
+		@include grid-unit($container-type: contained, $font-size: 1);
+	}
+
+}
+
+/* @media screen and (min-width: 600px) */
+//
+//		    .ooo     .oooo.     .oooo.                          
+//		  .88'      d8P'`Y8b   d8P'`Y8b                         
+//		 d88'      888    888 888    888 oo.ooooo.  oooo    ooo 
+//		d888P"Ybo. 888    888 888    888  888' `88b  `88b..8P'  
+//		Y88[   ]88 888    888 888    888  888   888    Y888'    
+//		`Y88   88P `88b  d88' `88b  d88'  888   888  .o8"'88b   
+//		 `88bod8'   `Y8bd8P'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+$void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
+	"media query units conversion error",
+	"600px are #{utils-units-convert-to-ems(600px)}", error);
+@media screen and (min-width: 37.5em) {
+
+	//Navigation
+	#mainnav {
+		@include grid-unit(6/12, last, $line-height: 3, $height: 2, $align: right, $margin-top: 1/2, $margin-bottom: 1/2);
+		ul > li > a {
+			@include grid-line(0.9);
+		}
+	}
+
+	#logoandname {
+		@include grid-unit(6/12, $height: 2, $container-type: container, $margin-top: 1/2, $margin-bottom: 1/2);
+	}
+
+	#headerName, #headerTitle {
+		//font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		white-space: nowrap;
+		text-indent: 42px;
+	}
+
+	#headerName {
+		@include grid-unit($font-size: 1, $single-line-vertical-align: 1, $height: 1, $container-type: contained);
+		font-weight: bold;
+	}
+
+	#headerTitle {
+		@include grid-unit($font-size: 0.85, $single-line-vertical-align: 0.15, $height: 1, $container-type: contained);
+		color: $settings-colors-lightgray;
+		font-style: italic;
+	}
+
+	//Welcome message
+	#welcomeMessage {
+		@include grid-unit($container-type: container, $margin-top: 0, $margin-bottom: 1);
+	}
+
+
+}
+//
+/* @media screen and (min-width: 640px) */
+//
+//		    .ooo         .o     .oooo.                          
+//		  .88'         .d88    d8P'`Y8b                         
+//		 d88'        .d'888   888    888 oo.ooooo.  oooo    ooo 
+//		d888P"Ybo. .d'  888   888    888  888' `88b  `88b..8P'  
+//		Y88[   ]88 88ooo888oo 888    888  888   888    Y888'    
+//		`Y88   88P      888   `88b  d88'  888   888  .o8"'88b   
+//		 `88bod8'      o888o   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 640px) {
+	//Navigation
+	#mainnav {
+		ul > li > a {
+			@include grid-line(1);	
+		}
+	}
+
+	//Curriculum Vitae
+	#cv-links > ul {
+		@include grid-unit(1/2, $margin-top: 1/2, $margin-bottom: 1/2, $container-type: contained);
+	}
+
+	#linkedin-button {
+		@include grid-unit(1/2, last, $margin-top: 1/2, $margin-bottom: 1/2, $padding-top: 0.5, $padding-bottom: 0.5, $container-type: contained);
+	}
+
+	//Blog
+	ul.blog-posts > li {
+		//@include grid-unit($margin-top: 0);
+		//TODO: [ ] Remove this line as soon as the bug is corrected.
+		//margin-top: 0;
+	}
+
+	.post-header > h1 {
+		@include grid-line(grid-modular-scale(3), $fit-method: bestfit); //, $margin-top: 1);
+	}
+////	.post-header > h2 {
+////		font-size: 0.85em;
+////		margin-top: 0em;
+////		margin-bottom: 0.25em;
+////		color: $settings-colors-lightgray;
+////		display: inherit;
+////	}
+////
+//	.metadata {
+//		@include grid-unit(1/2);
+//		&:before { content: "on "; }
+//		//display: inline;
+//	}
+//
+//	p.tags {
+//		@include grid-unit(1/2, last);
+//		//@include grid-line(0.85, $padding-top: 0.25, $padding-bottom: 0.75);
+//	}
+//
+}
+//
+///*
+//*
+//*  Eight-column grid active
+//*  ----------------------------------------------------------------------------------------------
+//*  Margin   | #  1     2     3     4     5     6     7     8     9    10    11    12  |   Margin
+//*    2%     | %  10    18    26    34    42    50    58    66    74   82    90    98  |     2%
+//*
+//*
+//*/
+//
+/* @media screen and (min-width: 720px) */
+//
+//		 ooooooooo   .oooo.     .oooo.                          
+//		d"""""""8' .dP""Y88b   d8P'`Y8b                         
+//		      .8'        ]8P' 888    888 oo.ooooo.  oooo    ooo 
+//		     .8'       .d8P'  888    888  888' `88b  `88b..8P'  
+//		    .8'      .dP'     888    888  888   888    Y888'    
+//		   .8'     .oP     .o `88b  d88'  888   888  .o8"'88b   
+//		  .8'      8888888888  `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 720px) {
+
+	//Navigation
+	#mainnav {
+		@include grid-unit(6/12, last, $line-height: 3, $height: 2, $align: right, $margin-top: 1, $margin-bottom: 1);
+		ul > li > a {
+			@include grid-line(1.1);	
+		}
+	}
+
+	//Header
+	#logoandname {
+		@include grid-unit(6/12, $height: 2, $container-type: container, $margin-top: 1, $margin-bottom: 1);
+		background-image: url('/img/Logo.png');
+		background-position: utils-calculate-gutter-width-in-ems() 0.4em;
+	}
+
+	#headerName, #headerTitle {
+		text-indent: 48px;
+	}
+
+	#headerName {
+		@include grid-unit($font-size: 1.2, $single-line-vertical-align: 1, $height: 1, $container-type: contained);
+	}
+	#headerTitle {
+		@include grid-unit($font-size: 1, $single-line-vertical-align: 0.15, $height: 1, $container-type: contained);
+	}
+
+	//Welcome message
+	#welcomeMessage {
+		@include grid-unit($container-type: container, $margin-top: 1/2, $margin-bottom: 3/2);
+	}
+
+	#introduction-text {
+		@include column-count(2);
+		@include column-gap(utils-calculate-gutter-width-in-ems() * 2);
+	}
+
+	@each $social in $icons {
+		.#{$social} {
+			background-position: 0px 50%;
+			text-indent: 24px;
+			text-decoration: none;
+			color: $settings-colors-darkgray;
+		}
+	}
+
+	//Curriculum
+	#cv-introtext {
+		@include grid-unit($font-size: grid-modular-scale(1));
+	}
+
+}
+
+/* @media screen and (min-width: 888px) */
+//
+//		 .ooooo.    .ooooo.    .ooooo.                          
+//		d88'   `8. d88'   `8. d88'   `8.                        
+//		Y88..  .8' Y88..  .8' Y88..  .8' oo.ooooo.  oooo    ooo 
+//		 `88888b.   `88888b.   `88888b.   888' `88b  `88b..8P'  
+//		.8'  ``88b .8'  ``88b .8'  ``88b  888   888    Y888'    
+//		`8.   .88P `8.   .88P `8.   .88P  888   888  .o8"'88b   
+//		 `boood8'   `boood8'   `boood8'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 888px) {
+	//Navigation
+	//Navigation
+	#mainnav {
+		ul > li > a {
+			@include grid-line(1.2);	
+		}
+	}
+
+	#layout-footer .sociallink {
+		@include grid-unit($font-size: 1, 1/6, "inner", $container-type: contained);
+		&:first { @include grid-unit($font-size: 1, 1/6, first, $container-type: contained); }
+		&:last { @include grid-unit($font-size: 1, 1/6, last, $container-type: contained); }
+	}
+}
+//
+///* @media screen and (min-width: 960px) */
+//
+//		 .ooooo.       .ooo     .oooo.                          
+//		888' `Y88.   .88'      d8P'`Y8b                         
+//		888    888  d88'      888    888 oo.ooooo.  oooo    ooo 
+//		 `Vbood888 d888P"Ybo. 888    888  888' `88b  `88b..8P'  
+//		      888' Y88[   ]88 888    888  888   888    Y888'    
+//		    .88P'  `Y88   88P `88b  d88'  888   888  .o8"'88b   
+//		  .oP'      `88bod8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                  888                   
+//		                                 o888o                  
+//
+@media screen and (min-width: 960px) {
+
+	#asDesigned {
+		//TODO: Criar uma funcao que faca os calculos automaticamente.
+		//		de acordo com o ratio actual do body.
+		//width: 61.5em / 1.25em;
+	  max-width: 960px;
+	  margin: 0 auto;
+  		//width: 49.2em;
+	}
+
+	//Navigation
+	#mainnav {
+		//@include grid-unit($font-size: 1.35, 5/12, "last", $align: "right", $margin-top: 1, $margin-bottom: 1);
+	}
+
+	//Blog
+	ul.blog-posts > li {
+		//@include grid-unit($container-type: container);
+	}
+
+	.blog-post {
+		@include grid-unit($container-type: container);
+		padding-left: 0em;
+		padding-right: 0em;
+	}
+
+	.post-header {
+		@include grid-unit(3/4, $container-type: contained, $align: right);
+	}
+
+	.post-metadata {
+		@include grid-unit(1/4, $container-type: contained); // , $margin-top: 1);
+	}
+
+	.post-header > h2 {
+		display: inherit; //Toggle visibility on
+		@include grid-line($font-size: 1);
+		font-weight: normal;
+		//font-size: 1em;
+		color: $settings-colors-lightgray;
+	}
+
+	.metadata {
+		display: inherit; //Toggle visibility on
+		//font-size: 0.85em;
+	}
+
+	p.tags {
+		@include grid-line(1);
+		padding-top: 0;
+		padding-bottom: 0;
+		&:before { content: none; }
+	}
+
+	.post-content {
+		@include grid-unit(3/4, last, $container-type: contained, $align: right, $margin-top: 1); //, $margin-top: 0.75, $margin-bottom: 0.5);
+	}
+
+	#post-comments {
+		@include grid-unit($container-type: contained);
+	}
+
+	//Curriculum Vitae
+	#cv-links {
+		@include grid-unit(1/3, last, $container-type: container, $align: right);
+		margin-top: 0;
+		margin-bottom: 0;
+
+		> ul {
+			@include grid-unit($container-type: contained);
+			list-style-type: none;
+		}
+	}
+
+	#linkedin-button {
+		@include grid-unit($margin-left: 1, $margin-right: 1, $margin-top: 1, $padding-top: 0.5, $padding-bottom: 0.5, $container-type: contained);
+		@include border-radius(utils-units-convert-to-ems(5px));
+		padding-left: utils-calculate-gutter-width-in-ems() + utils-units-convert-to-ems(16px + 12px);
+		background: url("/img/Social/linkedin.png") no-repeat scroll 12px center lightgray;//rgb(154, 152, 151);
+		background-size: 16px 16px;
+		color: $settings-colors-lightgray;
+		text-align: center;
+	}
+
+	#cv-introtext {
+		@include grid-unit(2/3, $margin-top: 1/2, $margin-bottom: 1/2, $font-size: grid-modular-scale(1));
+		color: $settings-colors-lightgray;
+	}
+
+	#cv-skills-heading { @include grid-unit(); display: none; }
+	#cv-skills-items { @include grid-unit(); display: none; }
+
+	#cv-exp { }
+	.cv-exp-title {
+		@include grid-unit(1/4, $font-size: grid-modular-scale(4), $margin-top: 1, $single-line-vertical-align: 0);
+		color: $settings-colors-darkgray;
+	}
+	.cv-exp-list { }
+	.cv-exp-item { @include grid-unit(3/4, last, $container-type: container, $align: right); }
+	.cv-exp-item-header { }
+	.cv-exp-item-header-date {
+		@include grid-unit($container-type: contained);
+		color: $settings-colors-darkgray;
+	}
+	.cv-exp-item-header-company {
+		@include grid-unit($container-type: contained, $font-size: grid-modular-scale(4), $fit-method: bestfit, $single-line-vertical-align: 1);
+		white-space:nowrap;
+	}
+	.cv-exp-item-header-role {
+		@include grid-unit($container-type: contained, $font-size: 1);
+		color: $settings-colors-lightgray;
+	}
+	.cv-exp-item-details { @include grid-unit($container-type: contained, $margin-top: 1); }
+
+}
+//
+///* @media screen and (min-width: 1200px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1200px)) { }
+//
+//		  .o    .oooo.     .oooo.     .oooo.                          
+//		o888  .dP""Y88b   d8P'`Y8b   d8P'`Y8b                         
+//		 888        ]8P' 888    888 888    888 oo.ooooo.  oooo    ooo 
+//		 888      .d8P'  888    888 888    888  888' `88b  `88b..8P'  
+//		 888    .dP'     888    888 888    888  888   888    Y888'    
+//		 888  .oP     .o `88b  d88' `88b  d88'  888   888  .o8"'88b   
+//		o888o 8888888888  `Y8bd8P'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1392px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1392px)) { }
+//
+//		
+//		  .o    .oooo.    .ooooo.     .oooo.                          
+//		o888  .dP""Y88b  888' `Y88. .dP""Y88b                         
+//		 888        ]8P' 888    888       ]8P' oo.ooooo.  oooo    ooo 
+//		 888      <88b.   `Vbood888     .d8P'   888' `88b  `88b..8P'  
+//		 888       `88b.       888'   .dP'      888   888    Y888'    
+//		 888  o.   .88P      .88P'  .oP     .o  888   888  .o8"'88b   
+//		o888o `8bd88P'     .oP'     8888888888  888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1680px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1680px)) { }
+//
+//		
+//		  .o      .ooo    .ooooo.     .oooo.                          
+//		o888    .88'     d88'   `8.  d8P'`Y8b                         
+//		 888   d88'      Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		 888  d888P"Ybo.  `88888b.  888    888  888' `88b  `88b..8P'  
+//		 888  Y88[   ]88 .8'  ``88b 888    888  888   888    Y888'    
+//		 888  `Y88   88P `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		o888o  `88bod8'   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 1872px) */
+//@media screen and (min-width: convert-to-media-queries-ems(1872px)) { }
+//
+//		  .o   .ooooo.    ooooooooo   .oooo.                          
+//		o888  d88'   `8. d"""""""8' .dP""Y88b                         
+//		 888  Y88..  .8'       .8'        ]8P' oo.ooooo.  oooo    ooo 
+//		 888   `88888b.       .8'       .d8P'   888' `88b  `88b..8P'  
+//		 888  .8'  ``88b     .8'      .dP'      888   888    Y888'    
+//		 888  `8.   .88P    .8'     .oP     .o  888   888  .o8"'88b   
+//		o888o  `boood8'    .8'      8888888888  888bod8P' o88'   888o 
+//		                                        888                   
+//		                                       o888o                  
+//
+
+///* @media screen and (min-width: 2080px) */
+//@media screen and (min-width: convert-to-media-queries-ems(2080px)) { }
+//
+//		  .oooo.     .oooo.    .ooooo.     .oooo.                          
+//		.dP""Y88b   d8P'`Y8b  d88'   `8.  d8P'`Y8b                         
+//		      ]8P' 888    888 Y88..  .8' 888    888 oo.ooooo.  oooo    ooo 
+//		    .d8P'  888    888  `88888b.  888    888  888' `88b  `88b..8P'  
+//		  .dP'     888    888 .8'  ``88b 888    888  888   888    Y888'    
+//		.oP     .o `88b  d88' `8.   .88P `88b  d88'  888   888  .o8"'88b   
+//		8888888888  `Y8bd8P'   `boood8'   `Y8bd8P'   888bod8P' o88'   888o 
+//		                                             888                   
+//		                                            o888o                  
+//
+
+//* { transition: all 1s; }
+//

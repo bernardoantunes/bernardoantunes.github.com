@@ -1,0 +1,21 @@
+auto: false
+auto: true
+server: false
+lsi: false
+pygments: true
+permalink: /notes/:title
+paginate: 10
+exclude: ["Rakefile", "LICENSE.txt", "CNAME"]
+title: Bernardo Antunes
+url: http://bernardoantunes.com
+github_user: bernardoantunes
+navigation:
+- text: Home
+  url: /index.html
+- text: Notes
+  url: /notes/index.html
+  layout: post
+- text: CV
+  url: /cv/index.html
+- text: About
+  url: /about/index.html

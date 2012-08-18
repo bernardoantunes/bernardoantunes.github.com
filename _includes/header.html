@@ -1,0 +1,23 @@
+        <nav id="mainnav">
+            <ul class="menu menu-main">
+                {% for link in site.navigation %}
+                  {% assign current = nil %}
+                  {% if page.url == link.url or page.layout == link.layout or page.selectNavigationMenuItem == link.url %}
+                    {% assign current = 'current' %}
+                  {% endif %}
+
+                  <li {% if current != nil %}class="current"{% endif %}>
+                    <a href="{{ link.url }}">{{ link.text }}</a>
+                  </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <header id="layout-header">
+            <!--<div id="logoandname">-->
+            <a id="logoandname" href="/">
+                <span id="headerName">Bernardo Antunes</span>
+                <span id="headerTitle">thinker, father & world citizen</span>
+            </a>
+            <!--</div>-->
+        </header>

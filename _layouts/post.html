@@ -1,0 +1,29 @@
+---
+layout: default
+selectNavigationMenuItem: /notes/index.html
+---
+
+  <article class="blog-post">
+      <header class="post-header">
+          <h1>{{ page.title }}</h1>
+          <h2 class="value">{{ page.byline }}</h2>
+      </header>
+      <div class="post-metadata">
+          <div class="metadata">{{ page.date | date: "%d %b %Y" }}</div>
+          <p class="tags">
+            {% unless no_category %}
+              {% if page.category %}
+                      <a href="#{{ page.category | slugize }}">{{ page.category }}</a>
+              {% endif %}
+            {% endunless %}
+          </p>
+      </div>
+      <div class="post-content">
+          {{ content }}
+      </div>
+    {% unless page.no_comments %}
+    <div id="post-comments">
+      {% include comments.html %}
+    </div>
+    {% endunless %}
+  </article>
