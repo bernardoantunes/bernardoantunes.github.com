@@ -231,7 +231,7 @@ p.tags {
 	&:before { color: $settings-colors-verydarkgray; content: "about "; }
 }
 
-.post-content {
+.post-content, #page-content {
 	
 	h1, h2 {
 
@@ -241,7 +241,7 @@ p.tags {
 	    text-transform: uppercase;
 	}
 
-	p {
+	p, ul {
 		@include grid-line($margin-bottom: 1);
 	}
 }

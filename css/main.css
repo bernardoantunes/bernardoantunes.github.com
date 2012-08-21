@@ -628,7 +628,7 @@ p.tags:before {
 }
 
 /* line 236, ../_sass/_BernardoUnitGS.scss */
-.post-content h1, .post-content h2 {
+.post-content h1, .post-content h2, #page-content h1, #page-content h2 {
   font-size: 1.2em;
   line-height: 1.333;
   padding-top: 0.444em;
@@ -638,7 +638,7 @@ p.tags:before {
   text-transform: uppercase;
 }
 /* line 244, ../_sass/_BernardoUnitGS.scss */
-.post-content p {
+.post-content p, .post-content ul, #page-content p, #page-content ul {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 1.6em;
