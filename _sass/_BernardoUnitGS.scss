@@ -451,7 +451,7 @@ $void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
 //		                                  888                   
 //		                                 o888o                  
 //
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40em) {
 	//Navigation
 	#mainnav {
 		ul > li > a {
@@ -521,7 +521,7 @@ $void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
 //		                                  888                   
 //		                                 o888o                  
 //
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 45em) {
 
 	//Navigation
 	#mainnav {
@@ -587,7 +587,7 @@ $void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
 //		                                  888                   
 //		                                 o888o                  
 //
-@media screen and (min-width: 888px) {
+@media screen and (min-width: 55.5em) {
 	//Navigation
 	//Navigation
 	#mainnav {
@@ -615,13 +615,13 @@ $void: debug-assert(utils-units-convert-to-ems(600px) == 37.5em,
 //		                                  888                   
 //		                                 o888o                  
 //
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 60em) {
 
 	#asDesigned {
 		//TODO: Criar uma funcao que faca os calculos automaticamente.
 		//		de acordo com o ratio actual do body.
 		//width: 61.5em / 1.25em;
-	  max-width: 960px;
+	  max-width: 60em;
 	  margin: 0 auto;
   		//width: 49.2em;
 	}

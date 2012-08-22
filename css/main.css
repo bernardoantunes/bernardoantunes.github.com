@@ -1216,7 +1216,7 @@ p.tags:before {
   }
 }
 /* @media screen and (min-width: 640px) */
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40em) {
   /* line 457, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1em;
@@ -1274,7 +1274,7 @@ p.tags:before {
   }
 }
 /* @media screen and (min-width: 720px) */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 45em) {
   /* line 527, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
@@ -1465,7 +1465,7 @@ p.tags:before {
   }
 }
 /* @media screen and (min-width: 888px) */
-@media screen and (min-width: 888px) {
+@media screen and (min-width: 55.5em) {
   /* line 594, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1.2em;
@@ -1527,10 +1527,10 @@ p.tags:before {
     display: inline;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 60em) {
   /* line 620, ../_sass/_BernardoUnitGS.scss */
   #asDesigned {
-    max-width: 960px;
+    max-width: 60em;
     margin: 0 auto;
   }
 
