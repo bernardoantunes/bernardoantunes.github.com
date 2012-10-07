@@ -1,24 +1,24 @@
-﻿//##############################################################################
-//##############################################################################
-//########################## READ THIS FIRST ###################################
+﻿//
 //
-// This is a draft version of the Unit Grid System.
-// It has some bugs and the documentation is incorrect and incomplete.
-// For the latest version check http://unit.gs there you have all the
-// instructions about how to start your site with the Unit Grid System
-// and the code is available and updated on GitHub.
+//  Unit Grid System (0.9) 	<http://unit.gs/>
+//  by Bernardo Antunes		<http://bernardoantunes.com/>
+//  licensed under MIT 		<http://opensource.org/licenses/mit-license.php>
+//	
 //
-// If you read this before I publish the site, don't worry it will be there
-// in the next days, I am dedicated to it.
-//
-// If you are in a hurry you can contact me directly: myself@bernardoantunes.com
-//
-//##############################################################################
-//##############################################################################
 
-//@import "UnitGS-Utils.scss";
-//TODO: [ ] Check if we should have this in another place, for instance the grid-init.
-//@import "UnitGS-Base.scss";
+//                              DOCUMENTATION
+//
+//  You can access the documentation of the grid with examples in http://unit.gs/documentation
+//
+//  To get the documentation of a specific element access the following:
+//  http://unit.gs/<item-type>-<item-name>
+//
+//  Examples:
+//
+//  $grid-debug -> http://unit.gs/variable-grid-debug
+//  @function utils-convert-pixels-to-ems -> http://unit.gs/function-utils-convert-pixels-to-ems
+//  @mixin grid-unit -> http://unit.gs/mixin-grid-unit
+//
 
 //Activates the debug mode.
 $grid-debug: false !default;
@@ -33,12 +33,12 @@ $debug-trace-levels: none information warning error;
 //Indicates the minimum level of tracing when the $grid-debug is activated.
 //By default all levels will be showned information, warning and error.
 //You can shut the messages completly off by passing the parameter off - NOT ADVICED..
-$gridgs-debug-minimum-trace-level-in-debug: information !default;
+$debug-minimum-trace-level-in-debug: information !default;
 
 //Indicates the minimum level of tracing when the $grid-debug is not activated.
 //By default only the errors are shown.
 //You can shut the messages completly off by passing the parameter off - NOT ADVICED.
-$gridgs-debug-minimum-trace-level: error !default;
+$debug-minimum-trace-level: error !default;
 
 $debug-column-color: ligthblue;
 $debug-column-color-hue: 0;
@@ -88,6 +88,7 @@ $debug-column-color-lightness: 70%;
 	@return $debug-column-color;
 }
 
+//@mixin debug-colors
 @mixin debug-colors {
 	@if $grid-debug {
 		$number-of-properties: length($debug-properties-to-color);
@@ -108,9 +109,6 @@ $debug-column-color-lightness: 70%;
 //	(1) none (2) information (3) warning (4) error
 //
 //$trace-level: The trace level to convert to a value.
-//
-//TODO: [ ] Include the reference to the errors.
-//TODO: [ ] Activate the debug-trace line after the function is tested. ;)
 @function debug-get-trace-level-value($trace-level) {
 	$trace-level-index: 1;
 	@each $trace-level-item in $debug-trace-levels {
@@ -124,8 +122,6 @@ $debug-column-color-lightness: 70%;
 
 	//Lets warn for the error.
 	@warn "The trace level #{$trace-level} does not exist.";
-	//Activate this line after the function is tested. ;)
-	//debug-trace("@function debug-get-trace-level-value", "The trace level #{$trace-level} does not exist.", error, "");
 
 	//Return an invalid trace level value.
 	@return 0;
@@ -148,7 +144,7 @@ $debug-column-color-lightness: 70%;
 //
 //$href:			Reference to the documentation about the error. Normally is a link.
 @function debug-trace($context, $message, $message-type: information, $href: "") {
-	$trace-level: if($grid-debug, $gridgs-debug-minimum-trace-level-in-debug, $gridgs-debug-minimum-trace-level);
+	$trace-level: if($grid-debug, $debug-minimum-trace-level-in-debug, $debug-minimum-trace-level);
 
 	//Lets verify if the trace is on for this context.
 	@if $trace-level != off {
@@ -167,17 +163,19 @@ $debug-column-color-lightness: 70%;
 	@return nothing;
 }
 
-//@mixin debug-assert
+//@function debug-assert
 //This function writes a message to the output of Sass so that the user gets debug information.
 //
 //$condition:		The message is only written if the condition retuns true.
 //
 //other parameters:	See debug-trace documentation.
-@mixin debug-assert($condition, $context, $message, $message-type: information, $href: "") {
+@function debug-assert($condition, $context, $message, $message-type: information, $href: "") {
 	//Only writes if the condition is asserted.
 	@if $condition {
-		@include debug-trace($context, $message, $message-type, $href);
+		$void: debug-trace($context, $message, $message-type, $href);
 	}
+
+	@return $condition;
 }
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
@@ -210,55 +208,47 @@ $debug-column-color-lightness: 70%;
 	@return 0;
 }
 
-//TODO: [ ] Bug - If the margin-top is already set, setting the $margin-top: 0; does not change the value back.
-
-//TODO: [ ] On top of each function put only a reference to the documentation
-//			So that we dont have to maintain the documentation in two places.
-//TODO: [ ] Create a function that will recalculate all the settings values.
-//			That function will be called in the settings setters so that all the
-//			settings are mantained co
-//TODO: [ ] allow setting the parameter in the mixin values without "" ex: left.
-//TODO: [ ] Verify all the parameters that have variables as their default values
-//			because it compiles correctly even if the variable does not exist.
-//TODO: [ ] Verificar a unidade (ems, px, etc.) para garantir que apenas estao
-//			a ser passadas unidades que sao suportadas pela grid.
-//TODO: [ ] Permitir a utilizacao de outras unidades nos parametros ems, px, etc.
-//
-// Important numbers
-//
-
-//TODO: [ ] Criar a possibilidade de alinhar uma coluna ao fundo do ecran para paginas com pouco conteudo.
-
 //Constants
 
 //Note: This is not a absolute value, but an assumgtion that the user did not change their browser settings.
 //		Although it is not important since we are in the relative world of a fluid and responsive grid.
 $unitgs-constants-browser-default-text-size: 16;
 
-//Grid Settings
+//Control variables
+$unitgs-control-set-grid-settings-called: false; //Controls if the user called the grid settings mixin.
+$unitgs-control-init-grid-called: false; //Controls if the user called the init grid mixin.
 
-$unitgs-settings-number-of-columns: 25 !default;
-$unitgs-settings-number-of-active-columns: 24 !default;
-$unitgs-settings-base-font-size: $unitgs-constants-browser-default-text-size !default;
-$unitgs-settings-base-line-ratio: 1.5 !default;
-$unitgs-settings-base-gutter-ratio: 1 !default;
-$unitgs-settings-use-last-right-margins: true !default; 
-$unitgs-settings-use-clear: true !default;
+//Grid Settings Defaults
+$unitgs-settings-default-number-of-columns: 25 !default;
+$unitgs-settings-default-number-of-active-columns: 24 !default;
+$unitgs-settings-default-base-font-size: 1 !default;
+$unitgs-settings-default-base-line-height: 1.5 !default;
+$unitgs-settings-default-base-gutter-width: 1 !default;
+$unitgs-settings-default-use-last-right-margins: true !default; 
+$unitgs-settings-default-use-clear: true !default;
+$unitgs-settings-default-grid-current-scale: 1 !default;
+
+//Grid Settings
+$unitgs-settings-number-of-columns: $unitgs-settings-default-number-of-columns !default;
+$unitgs-settings-number-of-active-columns:$unitgs-settings-default-number-of-active-columns !default;
+$unitgs-settings-base-font-size: $unitgs-settings-default-base-font-size !default;
+$unitgs-settings-base-line-height: $unitgs-settings-default-base-line-height !default;
+$unitgs-settings-base-gutter-width: $unitgs-settings-default-base-gutter-width !default;
+$unitgs-settings-use-last-right-margins: $unitgs-settings-default-use-last-right-margins !default; 
+$unitgs-settings-use-clear: $unitgs-settings-default-use-clear !default;
 
 //Dont set this property directly use the function set-scale();
-$unitgs-grid-units-current-scale: 1 !default;
+$unitgs-settings-grid-current-scale: $unitgs-settings-default-grid-current-scale !default;
 
 //Calculated settings
-$unitgs-settings-base-line-height: $unitgs-settings-base-font-size * $unitgs-settings-base-line-ratio;
 $unitgs-grid-column-size: 100% / $unitgs-settings-number-of-columns;
-$unitgs-grid-units-to-body-ems-ratio: $unitgs-settings-base-font-size / $unitgs-constants-browser-default-text-size;
 
 //grid-line mixin defaults.
 //Unless the relation is broken, this settings will be inherited by the grid-unit defaults.
 $unitgs-settings-grid-line-default-font-size: 1 !default;
 $unitgs-settings-grid-line-default-fit-method: nearest !default;
 //Dont set this default, it is set by the grid settings.
-$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-ratio;
+$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-height;
 $unitgs-settings-grid-line-default-padding-top: 0 !default;
 $unitgs-settings-grid-line-default-padding-bottom: 0 !default;
 $unitgs-settings-grid-line-default-margin-top: 0 !default;
@@ -278,17 +268,17 @@ $unitgs-settings-grid-line-default-height: 0 !default;
 //				Ex: 1/3 1/2 1/4 -	means 1/3 of the grid then 1/2 of the container and then 1/4 of the
 //									container of the container, resulting in a 1/24 that would mean
 //									1 column of a grid with 24 active columns.
-$unitgs-settings-grid-unit-width-resolution-mode: absolute !default;
+$unitgs-settings-grid-unit-width-resolution-mode: relative !default;
 
 //grid-unit mixin defaults.
-$unitgs-settings-grid-unit-default-width: 0 !default;
+$unitgs-settings-grid-unit-default-width: fullrow !default;
 $unitgs-settings-grid-unit-default-position: first !default;
 $unitgs-settings-grid-unit-default-margin-right: 0 !default;
 $unitgs-settings-grid-unit-default-margin-left: 0 !default;
 $unitgs-settings-grid-unit-default-container-type: none !default;
 //Dont set this default, it is set by the grid settings.
 $unitgs-settings-grid-unit-default-container-width: $unitgs-settings-number-of-active-columns;
-$unitgs-settings-grid-unit-default-align: left !default;
+$unitgs-settings-grid-unit-default-float: left !default;
 $unitgs-settings-grid-unit-default-gutter: both !default;
 //To maintain coherence change this values in the grid-line default values.
 //If you are sure that you want two different behaviours, you can set them directly
@@ -303,149 +293,155 @@ $unitgs-settings-grid-unit-default-padding-top: $unitgs-settings-grid-line-defau
 $unitgs-settings-grid-unit-default-padding-bottom: $unitgs-settings-grid-line-default-padding-bottom !default;
 $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-height !default;
 
-//@debug "unitgs-grid-units-to-body-ems-ratio: " + $unitgs-grid-units-to-body-ems-ratio;
-
 //@mixin unitgs-set-grid-settings
-//This function is used to set the grid-settings. You should NOT set the settings directly, if you do
-//you run the risk of getting dependent settings into an unstable state.
-//
-//	$number-of-columns:			Defines the number of total columns of the grid.
-//								Default value: $unitgs-settings-number-of-columns.
-//
-//	$number-of-active-columns:	Defines the number of active columns for the grid.
-//								Default value: $unitgs-settings-number-of-active-columns,
-//
-//	$font-size:					Base font-size, by wich all the other values will relate to.
-//								Default value: $unitgs-settings-base-font-size,
-//
-//	$line-height:					Defines the ratio between the font-size and the line.
-//								Default value: $unitgs-settings-base-line-ratio
-//
-//	$gutter-ratio:				Defines the size of the gutter relative to the line-height.
-//								The gutter is devided by the left and right padding.
-//								Default value: $unitgs-settings-base-gutter-ratio that by default
-//											   is one (line height).
-//
-//	$use-last-right-margins:		Indicates if the last column uses a margin.
-//								Default value: $unitgs-settings-use-last-right-margins,
-//
-//	$use-clear:					Indicates if the design uses the clear on the first and fullrow columns.
-//								Default value: $unitgs-settings-use-clear
 @mixin unitgs-set-grid-settings(
-	$number-of-columns: $unitgs-settings-number-of-columns,
-	$number-of-active-columns: $unitgs-settings-number-of-active-columns,
-	$font-size: $unitgs-settings-base-font-size,
-	$line-height: $unitgs-settings-base-line-ratio,
-	$gutter-ratio: $unitgs-settings-base-gutter-ratio,
-	$use-last-right-margins: $unitgs-settings-use-last-right-margins,
-	$use-clear: $unitgs-settings-use-clear
+	$number-of-columns: undefined,
+	$number-of-active-columns: undefined,
+	$font-size: undefined,
+	$line-height: undefined,
+	$gutter-width: undefined,
+	$use-last-right-margins: undefined,
+	$use-clear: undefined
 ) {
+
+	//Lets check if the grid-settings was already called and warn if it was.
+	$void: debug-assert($unitgs-control-set-grid-settings-called,
+		"@mixin unitgs-set-grid-settings",
+		"The mixin unitgs-set-grid-settings was already called, be sure that this is what you want.",
+		warning, "");
+
+	//If the number of active columns is undefined, lets make it the same number as the total columns.
+	@if $number-of-columns != undefined and $number-of-active-columns == undefined {
+		$number-of-active-columns: $number-of-columns;
+	}
+
 	//Set Grid Settings.
-	$unitgs-settings-number-of-columns: $number-of-columns;
-	$unitgs-settings-number-of-active-columns: $number-of-active-columns;
-	$unitgs-settings-base-font-size: $font-size;
-	$unitgs-settings-base-line-ratio: $line-height;
-	$unitgs-settings-base-gutter-ratio: $gutter-ratio;
-	$unitgs-settings-use-last-right-margins: $use-last-right-margins;
-	$unitgs-settings-use-clear: $use-clear;
+	$unitgs-settings-number-of-columns:			if($number-of-columns == undefined, $unitgs-settings-default-number-of-columns, $number-of-columns);
+	$unitgs-settings-number-of-active-columns:	if($number-of-active-columns == undefined, $unitgs-settings-default-number-of-active-columns, $number-of-active-columns);
+	$unitgs-settings-base-font-size:			if($font-size == undefined, $unitgs-settings-default-base-font-size, $font-size);
+	$unitgs-settings-base-line-height:			if($line-height == undefined, $unitgs-settings-default-base-line-height, $line-height);
+	$unitgs-settings-base-gutter-width:			if($gutter-width == undefined, $unitgs-settings-default-base-gutter-width, $gutter-width);
+	$unitgs-settings-use-last-right-margins:	if($use-last-right-margins == undefined, $unitgs-settings-default-use-last-right-margins, $use-last-right-margins);
+	$unitgs-settings-use-clear:					if($use-clear == undefined, $unitgs-settings-default-use-clear, $use-clear);
+
+	//Lets check if the number of active columns is bigger than the number of columns and correct if necessary.
+	@if debug-assert($unitgs-settings-number-of-active-columns > $unitgs-settings-number-of-columns,
+		"@mixin unitgs-set-grid-settings",
+		"The number of active columns cannot be bigger than the total number of columns. You set the value of the $unitgs-settings-number-of-active-columns with #{$number-of-active-columns} and it was corrected to #{$number-of-columns}.",
+		warning, "") {
+		$unitgs-settings-number-of-active-columns: $unitgs-settings-number-of-columns;
+	}
 
 	//Recalculate Dependent Settings
-	//TODO: [X] I would like to remove this variable from the grid, because I dont want pixel values in my calculations.
-	//$unitgs-settings-base-line-height: $unitgs-settings-base-font-size * $unitgs-settings-base-line-ratio;
 	$unitgs-grid-column-size: 100% / $unitgs-settings-number-of-columns;
-	$unitgs-grid-units-to-body-ems-ratio: $unitgs-settings-base-font-size / $unitgs-constants-browser-default-text-size;
-
+	
 	//Set related default values.
-	$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-ratio;
+	$unitgs-settings-grid-line-default-line-height: $unitgs-settings-base-line-height;
 	$unitgs-settings-grid-unit-default-container-width: $unitgs-settings-number-of-active-columns;
 	$unitgs-settings-grid-unit-default-line-height: $unitgs-settings-grid-line-default-line-height;
+
+	//Lets mark the mixin as executed.
+	$unitgs-control-set-grid-settings-called: true;
 
 	$void: debug-trace("@mixin unitgs-set-grid-settings",
 		"$unitgs-settings-number-of-columns: #{$unitgs-settings-number-of-columns}"
 		"$unitgs-settings-number-of-active-columns: #{$unitgs-settings-number-of-active-columns}"
 		"$unitgs-settings-base-font-size: #{$unitgs-settings-base-font-size}"
-		"$unitgs-settings-base-line-ratio: #{$unitgs-settings-base-line-ratio}"
-		"$unitgs-settings-base-gutter-ratio: #{$unitgs-settings-base-gutter-ratio}"
+		"$unitgs-settings-base-line-height: #{$unitgs-settings-base-line-height}"
+		"$unitgs-settings-base-gutter-width: #{$unitgs-settings-base-gutter-width}"
 		"$unitgs-settings-use-last-right-margins: #{$unitgs-settings-use-last-right-margins}"
 		"$unitgs-settings-use-clear: #{$unitgs-settings-use-clear}"
-		"$unitgs-grid-column-size: #{$unitgs-grid-column-size}"
-		"$unitgs-grid-units-to-body-ems-ratio: #{$unitgs-grid-units-to-body-ems-ratio}",
+		"$unitgs-grid-column-size: #{$unitgs-grid-column-size}",
 		information, "");
 }
 
-//@mixin unitgs-set-grid-scale
-//
-//$scale:	Defines the scale over wich you want to start working with the grid.
-//			For example, in a mobile first scenario, you probably want to have a
-//			grid scale for that size and other scales to higher dimensions.
-//			To be applied only to the base container of the grid, normally the body.
-@mixin unitgs-set-grid-scale($scale: 1) {
-	$unitgs-grid-units-current-scale: $scale;
+//http://unit.gs/mixin-unitgs-set-grid-scale/
+@mixin unitgs-set-grid-scale($scale: undefined, $wrapper-tag: undefined) {
 
-	font-size: #{$unitgs-grid-units-to-body-ems-ratio * $scale}em;
+	//If undefined, use the default value.
+	$scale:			if($scale == undefined or $scale == default, $unitgs-settings-default-grid-current-scale, $scale);
+	$wrapper-tag:	if($wrapper-tag == undefined or $wrapper-tag == default, $unitgs-settings-default-wrapper-tag, $wrapper-tag);
+
+	$unitgs-settings-grid-current-scale: $scale;
+
+	//If it is to wrap, lets wrap.
+	@if $wrapper-tag == none or $wrapper-tag == "" {
+		font-size: #{$unitgs-settings-base-font-size * $scale}em;
+	}
+	@else {
+		#{$wrapper-tag} {
+			font-size: #{$unitgs-settings-base-font-size * $scale}em;
+		}
+	}
 
 	$void: debug-trace("@mixin unitgs-set-grid-scale",
 		"Setting $scale to #{$scale}"
-		"font-size: #{$unitgs-grid-units-to-body-ems-ratio * $scale}em",
+		"$wrapper-tag: #{$wrapper-tag}"
+		"font-size: #{$unitgs-settings-base-font-size * $scale}em",
 		information, "");
 }
 
 //@mixin unitgs-set-grid-base-definitions
-//This mixin sets the grid base definitions to the base container.
-//It sets base font-size reference and the line-height for the vertical rythm.
-//normally to be applied to the body element of a page.
-//Note: Apply before start using the grid.
-//
-//$scale:	Defines the scale over wich you want to start working with the grid.
-//			For example, in a mobile first scenario, you probably want to have a
-//			grid scale for that size and other scales to higher dimensions.
-@mixin unitgs-init-grid($scale: 1) {
+//Resets except for form elements
+$unitgs-settings-default-reset-tags-list: html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas !default;
+$unitgs-settings-default-wrapper-tag: body !default;
+//http://unit.gs/mixin-unitgs-init-grid/
+@mixin unitgs-init-grid($scale: undefined, $wrapper-tag: undefined, $reset-tags-list: undefined) {
 
-	/*
-	*
-	*  Margin, padding, and border resets
-	*  except for form elements
-	*
-	*/
+	//Lets check if the unitgs-init-grid was already called and warn if it was.
+	$void: debug-assert($unitgs-control-init-grid-called,
+		"@mixin unitgs-init-grid",
+		"The mixin unitgs-init-grid was already called, be sure that this is what you want.",
+		warning, "");
 
-//	html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas {
-//		margin: 0;
-//		padding: 0;
-//		border: 0;
-//	}
-//
-//	/*
-//	*
-//	*  Consistency fixes
-//	*  adopted from http://necolas.github.com/normalize.css/
-//	*
-//	*/
-//
-//	html {
-//		height: 100%;
-//		-webkit-text-size-adjust: 100%;
-//		-ms-text-size-adjust: 100%;
-//	}
-//	body {
-//		min-height: 100%;
-//		font-size: 100%;
-//	}
+	//Lets check if the grid-settings was already called and warn if it was.
+	@if debug-assert(not $unitgs-control-set-grid-settings-called,
+		"@mixin unitgs-init-grid",
+		"The mixin unitgs-set-grid-settings was not called before the init-grid. It will be called without parameters.",
+		information, "") {
 
+		//Lets call the mixin unitgs-set-grid-settings before continuing the init.
+		@include unitgs-set-grid-settings();
+	}
 
+	//If undefined, lets fallback to the defaults.
+	$reset-tags-list:	if($reset-tags-list == undefined or $reset-tags-list == default, $unitgs-settings-default-reset-tags-list, $reset-tags-list);
+	$wrapper-tag:		if($wrapper-tag == undefined or $wrapper-tag == default, $unitgs-settings-default-wrapper-tag, $wrapper-tag);
 
-	/*
-	*
-	*	Zoomable baseline grid
-	*	type size presets
-	*
-	*/
+	@if $reset-tags-list != none {
+		//First lets make sure that the separator for all values is a comma.
+		$coma-separated-list: ();
+		@each $reset-tag in $reset-tags-list {
+			$coma-separated-list: join($coma-separated-list, unquote($reset-tag), comma);
+		}
 
-	@include unitgs-set-grid-scale($scale);
-	line-height: #{$unitgs-settings-base-line-ratio}em;
+		//Now lets declare the reset.
+		#{$coma-separated-list} {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+	}
+	
+	@if $wrapper-tag == none or $wrapper-tag == "" {
+		@include unitgs-set-grid-scale($scale, $wrapper-tag: none);
+		line-height: #{$unitgs-settings-base-line-height}em;
+	}
+	@else {
+		#{$wrapper-tag} {
+			@include unitgs-set-grid-scale($scale, $wrapper-tag: none);
+			line-height: #{$unitgs-settings-base-line-height}em;
+		}
+	}
+
+	//Mark the mixin init grid as executed.
+	$unitgs-control-init-grid-called: true;
 
 	$void: debug-trace("@mixin unitgs-init-grid",
 		"Setting $scale to #{$scale}"
-		"line-height: #{$unitgs-settings-base-line-ratio}em",
+		"$wrapper-tag: #{$wrapper-tag}"
+		"$reset-tags-list: #{$reset-tags-list}"
+		"line-height: #{$unitgs-settings-base-line-height}em",
 		information, "");
 }
 
@@ -643,21 +639,21 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 @function utils-calculate-gutter-width-in-ems($font-size: 1)
 {
 	$dimensions-ratio: calculate-dimensions-ratio($font-size);
-	@return $unitgs-settings-base-line-ratio * $unitgs-settings-base-gutter-ratio * $dimensions-ratio / 2 * 1em;
+	@return $unitgs-settings-base-line-height * $unitgs-settings-base-gutter-width * $dimensions-ratio / 2 * 1em;
 }
 
-//@function utils-units-convert-to-ems
+//@function utils-convert-pixels-to-ems
 //This function converts the pixels to ems.
 //
 //$number-of-pixels:		Number of pixels to convert to ems.
 //
 //$font-size:			The context to where you want to convert to ems.
-@function utils-units-convert-to-ems($number-of-pixels, $font-size: 1)
+@function utils-convert-pixels-to-ems($number-of-pixels, $font-size: 1)
 {
 	$number-of-pixels: $number-of-pixels / 1px;
 
 	$dimensions-ratio: calculate-dimensions-ratio($font-size);
-	@return $number-of-pixels / (($unitgs-grid-units-to-body-ems-ratio * $unitgs-grid-units-current-scale) * $dimensions-ratio) / $unitgs-constants-browser-default-text-size * 1em;
+	@return $number-of-pixels / (($unitgs-settings-base-font-size * $unitgs-settings-grid-current-scale) * $dimensions-ratio) / $unitgs-constants-browser-default-text-size * 1em;
 }
 
 //@function calculate-container-ratios
@@ -687,8 +683,6 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 //			for that container.
 //		otherwise returns the font-size to apply to the container.
 //
-//TODO: [ ] Check if we want to pass values in pixels and if it is really working
-//			the conversion of the units.
 @function calculate-container-ratios($font-sizes, $value-to-return: dimensions-ratio)
 {
 	//Base values.
@@ -697,11 +691,6 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 
 	//Vamos percorrer a lista a calcular os ratios.
 	@each $font-size in $font-sizes {
-		//If the unit is px, we are going to convert it to ems.
-		//@if unit($font-size) == "px" {
-		//	$font-size: utils-units-convert-to-ems($font-size);
-		//}
-
 		//First I calculate the new applied font because it will influence the calculation of the ratio.
 		$current-font-size: $font-size * $current-dimensions-ratio;
 		$current-dimensions-ratio: $current-dimensions-ratio / $current-font-size;
@@ -725,121 +714,41 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 	@return calculate-container-ratios($font-sizes, $value-to-return: dimensions-ratio);
 }
 
-//@function adjust-line-height-ratio
-//Verifies if the line-height needs to be corrected and corrects it.
-//
-//$font-sizes:
-//
-//TODO: [ ] Verify where this function is used. - only on the grid, so, I think we will be able to remove it.
-//TODO: [ ] Verify if it makes sense to pass a list of sizes.
-//TODO: [ ] This function does not make any sense, verify urgent.
-//@function adjust-line-height-ratio($font-sizes)
-//{
-//	//Lets get the last font-size in the list, lists in sass are 1 based.
-//	$wanted-font-size: nth($font-sizes, length($font-sizes));
-//
-//	//Lets ceil the new font-size.
-//	$adjusted-size: ceil($wanted-font-size);
-//
-//	//if $wanted-font-size is for 1 then the $adjusted-size is for x
-//	$new-line-height-ratio: $adjusted-size / $wanted-font-size * $unitgs-settings-base-line-ratio;
-//
-//	//Lets return the new line-height related with the new size.
-//	@return $new-line-height-ratio;
-//}
-
 //@mixin grid-unit
-//$width: ($number-of-active-columns) Indicates the size of the column in columns.
-//
-//$position: Defines the position in the current row.
-//	"fullrow": Indicates that will occupy oll the rom.
-//	"first": (default) It is the first column in the row.
-//	"middle": It is the a middle column in the row.
-//	"last": It is the last column in the row.
-//
-//$margin-top: (0) Number of lines as a top margin.
-//
-//$margin-right: (0) Number of columns as a right margin.
-//
-//$margin-bottom: (0) Number of lines as a bottom margin.
-//
-//$margin-left: (0) Number of columns as a left margin.
-//
-//$container-type: Defines if it is a top level column or a nested column.
-//	none:		(default) Indicates that it is a top level column that will not serve as a container.
-//	container:	Indicates that this column is a container for nested columns.
-//	contained:	Indicates that this column is included in another column.
-//	both:		Indicates that this column is included in another column and is a container for other columns.
-//
-//$container-grid-columns: Number of grid columns of the parent column.
-//	Atention: If you use a fraction value, it will refer to the active grid columns and not the parent.
-//
-//$font-size: Defines the absolute font-size pretended for the current container.
-//			  TODO [ ] : Make a full explanation of what it does and should be used.
-//
-//$gutter:	Defines where we want the gutters.
-//			Note: It only applies for container-type none or contained.
-//				none:	Removes the gutters.
-//				left:	Set only the left gutter.
-//				right:	Set only the right gutter.
-//				both:	(default) Sets both gutters.
-//Note:
-//	The parameters: $width, $margin-left, $margin-right and $parent-columns can be set by fraction of the grid.
-//	Good values for the 24 grid system:
-//       1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23
-//		                                            1/2
-//		                            1/3                             2/3
-//		                    1/4                                             3/4
-//		            1/6                                                             5/6
-//		    1/12                            5/12            7/12                            11/12
-//		1/24    3/24    5/24    7/24    9/24   11/24   13/24   15/24   17/24   19/24   21/24    23/24
-//TODO [] : Create padding-left and padding right | and padding-top and padding-bottom using the grid-line functions.
-//			This is important because of the gutters calculations.
-//TODO [] : Allow to pass other units to the grid parameters and make the conversions automatically.
-//TODO [] : Include documentation to all the parameters.
-//TODO: [ ] Call the grid-line to set the font-size, height, margin-top and margin-bottom parameters.
+//http://unit.gs/mixin-grid-unit/
 @mixin grid-unit(
-	$width: default,
-	$position: default,
-	$margin-top: default,
-	$margin-right: default,
-	$margin-bottom: default,
-	$margin-left: default,
-	$container-type: default,
-	//$container-width: default,
-	$align: default,
-	$font-size: default,
-	$fit-method: default,
-	$line-height: default,
-	$padding-top: default,
-	$padding-bottom: default,
-	$height: default,
-	$gutter: default,
-	$single-line-vertical-align: default
+	$width: undefined,
+	$position: undefined,
+	$margin-top: undefined,
+	$margin-right: undefined,
+	$margin-bottom: undefined,
+	$margin-left: undefined,
+	$container-type: undefined,
+	$float: undefined,
+	$font-size: undefined,
+	$fit-method: undefined,
+	$line-height: undefined,
+	$padding-top: undefined,
+	$padding-bottom: undefined,
+	$height: undefined,
+	$gutter: undefined,
+	$single-line-vertical-align: undefined
 	) {
 
 	//Lets convert the defaults in real values.
-	$position:			if($position == default, $unitgs-settings-grid-unit-default-position, $position);
-	$margin-top:		if($margin-top == default, $unitgs-settings-grid-unit-default-margin-top, $margin-top);
-	$margin-right:		if($margin-right == default, $unitgs-settings-grid-unit-default-margin-right, $margin-right);
-	$margin-bottom:		if($margin-bottom == default, $unitgs-settings-grid-unit-default-margin-bottom, $margin-bottom);
-	$margin-left:		if($margin-left == default, $unitgs-settings-grid-unit-default-margin-left, $margin-left);
-	$container-type:	if($container-type == default, $unitgs-settings-grid-unit-default-container-type, $container-type);
-	//$container-width:	if($container-width == default, $unitgs-settings-grid-unit-default-container-width, $container-width);
-	$align:				if($align == default, $unitgs-settings-grid-unit-default-align, $align);
-	$font-size:			if($font-size == default, $unitgs-settings-grid-unit-default-font-size, $font-size);
-	$fit-method:		if($fit-method == default, $unitgs-settings-grid-unit-default-fit-method, $fit-method);
-	$line-height:		if($line-height == default, $unitgs-settings-grid-unit-default-line-height, $line-height);
-	$padding-top:		if($padding-top == default, $unitgs-settings-grid-unit-default-padding-top, $padding-top);
-	$padding-bottom:	if($padding-bottom == default, $unitgs-settings-grid-unit-default-padding-bottom, $padding-bottom);
-	$height:			if($height == default, $unitgs-settings-grid-unit-default-height, $height);
-	$gutter:			if($gutter == default, $unitgs-settings-grid-unit-default-gutter, $gutter);
+	$width:				if($width == default, $unitgs-settings-grid-unit-default-width, $width);
+	$position:			if($position == undefined or $position == default, $unitgs-settings-grid-unit-default-position, $position);
+	$margin-right:		if($margin-right == undefined or $margin-right == default, $unitgs-settings-grid-unit-default-margin-right, $margin-right);
+	$margin-left:		if($margin-left == undefined or $margin-left == default, $unitgs-settings-grid-unit-default-margin-left, $margin-left);
+	$container-type:	if($container-type == undefined or $container-type == default, $unitgs-settings-grid-unit-default-container-type, $container-type);
+	$float:				if($float == undefined or $float == default, $unitgs-settings-grid-unit-default-float, $float);
+	$gutter:			if($gutter == undefined or $gutter == default, $unitgs-settings-grid-unit-default-gutter, $gutter);
 
 	//Dummy declaration.
-	$container-width: default;
+	$container-width: undefined;
 
 	//If the width was not set by the user.
-	@if $width == default {
+	@if $width == undefined {
 		//The container have the whole available space.
 		$container-width: $unitgs-settings-number-of-active-columns;
 		$margin-left: grid-fractions-to-columns($margin-left, $container-width);
@@ -847,8 +756,10 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		$width: $container-width - $margin-left - $margin-right;
 	//If the width was set by the user.
 	} @else {
-		//If the width specifies more than one dimension we know that is contained.
-		@if type-of($width) == list and length($width) > 1 {
+		//If the width or the font-size specifies more than one dimension we know that is contained.
+		@if (type-of($width) == list and length($width) > 1) or 
+			(type-of($font-size) == list and length($font-size) > 1){
+
 			@if $container-type == none { $container-type: contained; }
 			@else if $container-type == container { $container-type: both; }
 		}
@@ -860,21 +771,27 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		$margin-right: grid-fractions-to-columns($margin-right, $container-width);
 	}
 
+	//If the width and the left and right margins are bigger than the space available.
+	$void: debug-assert(($width + $margin-left + $margin-right) > $container-width,
+		"@mixin grid-unit",
+		"The sum of the width and the left and right margins are bigger than the space available.",
+		error, "");
+
+	//If the number of columns summed with the margins occupies all the container space.
+	@if ($width + $margin-left + $margin-right) == $container-width { $position: fullrow; }
+
 	//Set line related properties.
 	@include grid-line($font-size: $font-size, $fit-method: $fit-method, $line-height: $line-height,
 		$padding-top: $padding-top, $padding-bottom: $padding-bottom, $margin-top: $margin-top,
 		$margin-bottom: $margin-bottom, $height: $height, $single-line-vertical-align: $single-line-vertical-align);
 
-	//Se o numero de colunas completar o numero de colunas activas.
-	@if ($width + $margin-left + $margin-right) >= $container-width {
-		//Podemos considerar que e fullrow.
-		$position: fullrow;
-	}
+	//Lets resolve the font-size parameter.
+	$font-size:			if($font-size == undefined or $font-size == default, $unitgs-settings-grid-unit-default-font-size, $font-size);
 
 	//Default value.
 	$column-size: $unitgs-grid-column-size;
 
-	//Vamos calcular o tamanho de uma coluna.
+	//Calculates the size of the column.
 	@if $container-type == contained or $container-type == both {
 		$column-size: 100% / $container-width;
 	}
@@ -885,58 +802,54 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 	//Initial value.
 	$column-margin-left: 0;
 
-	//Se for a primeira columa ou fullrow e for uma coluna de topo vamos adicionar the inactive columns margin.
+	//If it is the first column or fullrow and it is also a top level column.
 	@if ($container-type == none or $container-type == container)
 	    and ($position == first or $position == fullrow) {
-		//Vamos adicionar a margem da grid e as colunas inactivas.
+		//Lets add the margins and the inactive columns.
 		$column-margin-left: $column-size * (($unitgs-settings-number-of-columns - $unitgs-settings-number-of-active-columns) / 2);
 	}
 
-	//Colunas Margin do lado esquerdo
+	//Calculate left columns margins.
 	$column-margin-left: $column-margin-left + $column-size * $margin-left;
 
 	//Initial value.
 	$column-margin-right: 0;
 
-	//As margens direitas apenas sao utilizadas se for explicitamente indicado.
+	//The right margins are only applied when the settings allow.
 	@if $unitgs-settings-use-last-right-margins == true {
-		//Se for a ultima columa ou fullrow e for uma coluna de topo vamos adicionar the inactive columns margin.
+		//If it is the last column or fullrow and is a top level column.
 		@if ($container-type == none or $container-type == container)
 			and ($position == last or $position == fullrow) {
-			//Vamos adicionar a margem da grid e as colunas inactivas.
+			//Lets add the margins and the inactive columns.
 			$column-margin-right: $column-size * (($unitgs-settings-number-of-columns - $unitgs-settings-number-of-active-columns) / 2);
 		}
 	}
 
-	//Margin da grid do lado direito
+	//Calculate right columns margins.
 	$column-margin-right: $column-margin-right + $column-size * $margin-right;
 
-	//Vamos definir as margens.
+	//Lets define the margins in the css.
 	margin-left: $column-margin-left;
 	margin-right: $column-margin-right;
 	
-	//Vamos posicionar a coluna.
-	@if $align == left { float: left; }
+	//Lets position the column.
+	@if $float == left { float: left; }
 	@else { float: right; }
 
-	//Apenas as colunas que nao sao containers tem os paddings da grid.
+	//Onlf the columns that are not containers have paddings (gutters).
 	@if $container-type == none or $container-type == contained {
 		//Default dimensions ratio.
 		$dimensions-ratio: 1;
-		//TODO [ ] : check how the array comparissons are performed.
 		//If it was defined a new font-size to the current container
 		@if $font-size != 1 {
 			//Lets calculate the dimentions ratio to be applied to relative sized elements.
 			$dimensions-ratio: calculate-dimensions-ratio($font-size);
 		}
 
-		//Vamos adicionar a margem dentro da coluna, as dimensoes da margem nao alteram com a fonte aplicada.
-		//Provavelmente quem tem de tratar destas contas e a grid-line.
-		
 		padding-left: #{if($gutter == both or $gutter == left, 
-			$unitgs-settings-base-line-ratio * $unitgs-settings-base-gutter-ratio * $dimensions-ratio / 2, 0)}em;
+			$unitgs-settings-base-line-height * $unitgs-settings-base-gutter-width * $dimensions-ratio / 2, 0)}em;
 		padding-right: #{if($gutter == both or $gutter == right, 
-			$unitgs-settings-base-line-ratio * $unitgs-settings-base-gutter-ratio * $dimensions-ratio / 2, 0)}em;
+			$unitgs-settings-base-line-height * $unitgs-settings-base-gutter-width * $dimensions-ratio / 2, 0)}em;
 
 		//Set box sizing to border-box
 		-webkit-box-sizing: border-box;
@@ -944,15 +857,12 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		    -ms-box-sizing: border-box;
 		     -o-box-sizing: border-box;
 		        box-sizing: border-box;
+	} @else {
+		//Lets force the paddings to get back to 0.
+		padding-left: 0; 
+		padding-right: 0;
 	}
 
-	//TODO: Understand better what, how and when the clear makes sense to be used.
-	// A propriedade $unitgs-settings-use-clear ja nao faz sentido pois nao a estamos a utilizar.
-	//TODO: Fix, because the first page of my site gets a problem with the image and the text.
-	//But this functionality is very important to fix jagged columns.
-	//Ex: The left column is longer than the right, the browser tries to align with it.
-	//TODO: Check if we have any way to allow the columns to fit in one another.
-	//		I think it is possible but only with contained columns.
 	@if $unitgs-settings-use-clear == true {
 		//Caso seja a primeira coluna, vamos garantir que nao temos nada do lado esquerdo.
 		@if $position == first { clear: left; }
@@ -972,95 +882,30 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 }
 
 //@mixin grid-line
-//This function sets the properties for the grid line.
-//
-//	$font-size:					List of the font-sizes, the last font size is the one that we want,
-//								relative to the $unitgs-settings-base-font-size.
-//
-//	$fit-method:				Defines the method used to decide the fit of the new font-size in the vertical rythm.
-//		nearest (default):		If the line rounds do the nearest whole number. ex: 1.2 = 1, 1.5 = 2, 1.8 = 2.
-//		ceil:					Always choose the next whole number. ex: 1.2 = 2, 1.5 = 2, 1.8 = 2.
-//		floor:					Always choose the base whole number. ex: 1.2 = 1, 1.5 = 1, 1.8 = 1.
-//								Note: nearest, ceil and floor use the line-height-ratio to calculate the line-height.
-//		bestfit:				Ignores the ratio
-//								Note: The bestfit, will get the bestfit of the font in the vertical rythm giving the minimum
-//									leading space possible.
-//
-//	$line-height:				Allows to specify the ratio between the font-size and the line. By default it will use the
-//								grid $unitgs-settings-base-line-ratio settings.
-//
-//	$padding-top:				Defines the top padding value. You can insert the value in ems or px. Default value is 0.
-//								Note:	The sum of the top and bottom paddings values should be a multiple of the grid line.
-//									If specified in unitless values it will be used the base line height as a base.
-//									If it is in px will be absolute value.
-//									If it is in ems or percentage it will be relative to the current line-height.
-//
-//	$padding-bottom:			Defines the bottom padding value. You can insert the value in ems or px. Default value is 0.
-//								Note: See notes of the $padding-top.
-//
-//	$min-font-to-line-spacing:	Defines a minimum of extra space between the font and the line.
-//								Note: The value is devided between the top and bottom.
-//								Ex: 10% will force a min margin of 5% on the top and on the bottom.
-//									wich what you probably want because with multiple lines, 5% of the bottom of the
-//									first line + the 5% of the top of the second line, makes the desired 10% margin,
-//									creating a good spacing.
-//
-//TODO: [X] Adicionar os parametros para os paddings.
-//TODO: [X] Permitir definir o alinhento vertical do texto. - Not possible.
-//TODO: [ ] Permitir definir um valor minimo de espacamento entre o texto e a linha.
-//TODO: [ ] Apply the ratios over the values for the contained columns.
-//TODO: [ ] Permitir passar valores em:
-//		[ ]	gu - relativo ao tamanho ao $unitgs-settings-base-line-ratio.
-//		[ ]	em - relativo ao tamanho da fonte.
-//		[ ]	%  - relativo ao tamanho da linha.
-//		[ ]	px - absoluto e convertido em ems.
-//TODO: [ ] Remover a necessidade de passar as opcoes como texto.
-//TODO: [ ] Permitir definir o fittype para o padding.
-//TODO: [ ] Fazer backup do trabalho.
-//TODO: [ ] Allow half-lines for smaller screens or tighter adjustments.
-//		Ver se e mesmo necessario ter uma opcao para meias linhas, ou se basta alterar e ritmo
-//		para metade do tamanho.
-//TODO:	[ ]	Por todos os default parameter values as settings.
-//TODO:	[ ]	Criar exemplos para todas as opcoes de todos os metodos.
-//TODO:	[ ]	Corrigir a documentacao.
-//TODO:	[ ]	Create a documentation with all the settings, constants, functions and mixins.
-//			Get ideas from Compass and Sass documentation.
-//TODO:	[ ]	Check compatibility with the browsers.
-//TODO:	[ ]	Create better debug information with a setting to activate/deactivate.
-//TODO:	[ ]	Make the grid generic removing the base-margin because it is not necessary.
-//TODO:	[ ]	Create a prefix for the namespace of the grid system.
-//TODO: [ ] Permitir definir o espaco minimo entre linhas - $min-font-to-line-spacing: 10%
-//TODO: [ ] Include the margin-top and margin-bottom parameters.
-//TODO: [ ] Include the height parameter.
-//TODO: [ ] Verify if I declare two times the same styles if they are written two times also.
-//
+//http://unit.gs/mixin-grid-line/
 @mixin grid-line(
-	$font-size: default,
-	$fit-method: default,
-	$line-height: default,
-	$padding-top: default,
-	$padding-bottom: default,
-	$margin-top: default,
-	$margin-bottom: default,
-	$height: default,
-	$single-line-vertical-align: default
+	$font-size: undefined,
+	$line-height: undefined,
+	$fit-method: undefined,
+	$padding-top: undefined,
+	$padding-bottom: undefined,
+	$margin-top: undefined,
+	$margin-bottom: undefined,
+	$height: undefined,
+	$single-line-vertical-align: undefined
 	)
 {
 	//Lets convert the defaults in real values.
-	$font-size:			if($font-size == default, $unitgs-settings-grid-line-default-font-size, $font-size);
-	$fit-method:			if($fit-method == default, $unitgs-settings-grid-line-default-fit-method, $fit-method);
-	$line-height:			if($line-height == default, $unitgs-settings-grid-line-default-line-height, $line-height);
-	$padding-top:		if($padding-top == default, $unitgs-settings-grid-line-default-padding-top, $padding-top);
-	$padding-bottom:		if($padding-bottom == default, $unitgs-settings-grid-line-default-padding-bottom, $padding-bottom);
-	$margin-top:			if($margin-top == default, $unitgs-settings-grid-line-default-margin-top, $margin-top);
-	$margin-bottom:		if($margin-bottom == default, $unitgs-settings-grid-line-default-margin-bottom, $margin-bottom);
-	$height:			if($height == default, $unitgs-settings-grid-line-default-height, $height);
-
-	//Unquote parameters.
-	//$fit-method: unquote($fit-method);
+	$font-size:			if($font-size == undefined or $font-size == default, $unitgs-settings-grid-line-default-font-size, $font-size);
+	$line-height:		if($line-height == undefined or $line-height == default, $unitgs-settings-grid-line-default-line-height, $line-height);
+	$fit-method:		if($fit-method == undefined or $fit-method == default, $unitgs-settings-grid-line-default-fit-method, $fit-method);
+	$padding-top:		if($padding-top == undefined or $padding-top == default, $unitgs-settings-grid-line-default-padding-top, $padding-top);
+	$padding-bottom:	if($padding-bottom == undefined or $padding-bottom == default, $unitgs-settings-grid-line-default-padding-bottom, $padding-bottom);
+	$margin-top:		if($margin-top == undefined or $margin-top == default, $unitgs-settings-grid-line-default-margin-top, $margin-top);
+	$margin-bottom:		if($margin-bottom == undefined or $margin-bottom == default, $unitgs-settings-grid-line-default-margin-bottom, $margin-bottom);
+	$height:			if($height == undefined or $height == default, $unitgs-settings-grid-line-default-height, $height);
 
 	//Lets set the font-size.
-	//TODO: Aplicar o ratio do container.
 	font-size: calculate-font-size($font-size) * 1em;
 
 	//Lets save only the last value.
@@ -1072,10 +917,9 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		$fit-method: ceil;
 	}
 
-	//Vamos calcular o numero de linhas da grid sao necessarias para conter a nova fonte
-	//com o ratio aplicado.
-	//Ex: 0.8em * 0.8 / 1.6 = 0.4. O que significa que sao necessarias meia linha.
-	$calculated-line-height: ($font-size * $line-height) / $unitgs-settings-base-line-ratio;
+	//Lets calculate the number of grid line that are necessary to contain the new font size.
+	//Ex: 0.8em * 0.8 / 1.6 = 0.4.
+	$calculated-line-height: ($font-size * $line-height) / $unitgs-settings-base-line-height;
 
 	//Vamos aplicar o metodo de arredondamento a linha definido pelo utilizador.
 	@if $fit-method == nearest {
@@ -1089,25 +933,23 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		$calculated-line-height: floor($calculated-line-height);
 	}
 
-	//Vamos aplicar o tamanho da linha para ter o tamanho real pretendido.
-	$calculated-line-height: $calculated-line-height * $unitgs-settings-base-line-ratio;
+	$calculated-line-height: $calculated-line-height * $unitgs-settings-base-line-height;
 
-	//Vamos salvaguardar para quando o resultado e inferior a tamanho de uma linha.
+	//If the result is less than a line, lets round it to a line.
 	//Ex: round(0.8em * 0.8 / 1.6) = 0
-	@if $calculated-line-height < $unitgs-settings-base-line-ratio {
-		//Vamos incrementar uma linha.
-		$calculated-line-height: $calculated-line-height + $unitgs-settings-base-line-ratio;
+	@if $calculated-line-height < $unitgs-settings-base-line-height {
+		$calculated-line-height: $calculated-line-height + $unitgs-settings-base-line-height;
 	}
 
 	//Save in case it is needed for single line vertical align.
-	$number-of-base-lines-per-line: $calculated-line-height / $unitgs-settings-base-line-ratio;
+	$number-of-base-lines-per-line: $calculated-line-height / $unitgs-settings-base-line-height;
 
 	//Lets calculate the font-size in units relative to the font.
 	$calculated-line-height: $calculated-line-height / $font-size;
 	
 
 	//Lets set the line-height.
-	@if $single-line-vertical-align == default {
+	@if $single-line-vertical-align == undefined {
 		line-height: $calculated-line-height;
 	} @else {
 		//Lets check if we are going to need to ignore a user parameter and trace it.
@@ -1121,45 +963,49 @@ $unitgs-settings-grid-unit-default-height: $unitgs-settings-grid-line-default-he
 		$height: $number-of-base-lines-per-line;
 	}
 
-	//Vamos somar os paddings.
+	//Sum the paddings.
 	$paddings-total: $padding-top + $padding-bottom;
-	//Se o total de paddings nao for multiplo das linhas.
+	//If the sum is not a line multiple.
 	@if $paddings-total % 1 != 0 {
-		//Vamos calcular o ratio de ajuste para cumprirem o ritmo vertical.
+		//Lets calculate the ratio to adjust to the vertical rythm.
 		$paddings-adjustment-ratio: ceil($paddings-total) / $paddings-total;
-		//Vamos aplicar os ajustes.
+		//Apply adjustment.
 		$padding-top: $padding-top * $paddings-adjustment-ratio;
 		$padding-bottom: $padding-bottom * $paddings-adjustment-ratio;
 	}
 
-	$padding-top: $padding-top * $unitgs-settings-base-line-ratio / $font-size * 1em;
-	$padding-bottom: $padding-bottom * $unitgs-settings-base-line-ratio / $font-size * 1em;
+	$padding-top: $padding-top * $unitgs-settings-base-line-height / $font-size * 1em;
+	$padding-bottom: $padding-bottom * $unitgs-settings-base-line-height / $font-size * 1em;
 
-	@if $single-line-vertical-align != default {
+	@if $single-line-vertical-align != undefined {
 		$padding-top: $padding-top + ($calculated-line-height - 1) * $single-line-vertical-align;
 		$padding-bottom: $padding-bottom + ($calculated-line-height - 1) * (1 - $single-line-vertical-align);
 	}
 
-	//Vamos aplicar os paddings.
+	//Lets apply the paddings.
 	@if $padding-top != 0 { padding-top: $padding-top; }
+	@else { padding-top: 0; }
 	@if $padding-bottom != 0 { padding-bottom: $padding-bottom; }
+	@else { padding-bottom: 0; }
 
 	//Lets sum the margins.
 	$margins-total: $margin-top + $margin-bottom;
-	//Se o total de margins nao for multiplo das linhas.
+	//If the total of the margins is not a lines multiple.
 	@if $margins-total % 1 != 0 {
-		//Vamos calcular o ratio de ajuste para cumprirem o ritmo vertical.
+		//Lets calculate the adjustment ratio.
 		$margins-adjustment-ratio: ceil($margins-total) / $margins-total;
-		//Vamos aplicar os ajustes.
+		//Lets apply the adjustments.
 		$margin-top: $margin-top * $margins-adjustment-ratio;
 		$margin-bottom: $margin-bottom * $margins-adjustment-ratio;
 	}
 
-	//$margin-top: 0, $margin-bottom: 0, $height: 0
-	@if $margin-top != 0 { margin-top: $margin-top * $unitgs-settings-base-line-ratio / $font-size * 1em; }
-	@if $margin-bottom != 0 { margin-bottom: $margin-bottom * $unitgs-settings-base-line-ratio / $font-size * 1em; }
+	//Lets set the margins.
+	@if $margin-top != 0 { margin-top: $margin-top * $unitgs-settings-base-line-height / $font-size * 1em; }
+	@else { margin-top: 0; }
+	@if $margin-bottom != 0 { margin-bottom: $margin-bottom * $unitgs-settings-base-line-height / $font-size * 1em; }
+	@else { margin-bottom: 0; }
 
-	@if $height != 0 { height: $height * $unitgs-settings-base-line-ratio / $font-size * 1em; }
+	@if $height != 0 { height: $height * $unitgs-settings-base-line-height / $font-size * 1em; }
 
 	//Set debug background for visibility.
 	@include debug-colors;
