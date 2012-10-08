@@ -393,12 +393,11 @@ $void: debug-assert(utils-convert-pixels-to-ems(480px) == 30em,
 		margin-top: 0;
 	}
 
-
 	#latest-projects {
 		#project-unitgs, #project-asDesigned {
 			.project-title {
 				h2 {
-					@include grid-line($font-size: 1.6, $line-height: 2);
+					@include grid-line($font-size: 1.5, $line-height: 2);
 				}
 			}
 		}
@@ -609,6 +608,17 @@ $void: debug-assert(utils-convert-pixels-to-ems(600px) == 37.5em,
 		@include column-count(2);
 		@include column-gap(utils-calculate-gutter-width-in-ems() * 2);
 	}
+
+	#latest-projects {
+		#project-unitgs, #project-asDesigned {
+			.project-title {
+				h2 {
+					@include grid-line($font-size: 1.6, $line-height: 2);
+				}
+			}
+		}
+	}
+
 
 	@each $social in $icons {
 		.#{$social} {

@@ -1291,17 +1291,17 @@ p.tags:before {
     margin-top: 0;
   }
 
-  /* line 400, ../_sass/_BernardoUnitGS.scss */
+  /* line 399, ../_sass/_BernardoUnitGS.scss */
   #latest-projects #project-unitgs .project-title h2, #latest-projects #project-asDesigned .project-title h2 {
-    font-size: 1.6em;
-    line-height: 2;
+    font-size: 1.5em;
+    line-height: 2.13333;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  /* line 408, ../_sass/_BernardoUnitGS.scss */
+  /* line 407, ../_sass/_BernardoUnitGS.scss */
   .blog-post {
     font-size: 1em;
     line-height: 1.6;
@@ -1324,7 +1324,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 414, ../_sass/_BernardoUnitGS.scss */
+  /* line 413, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1em;
     line-height: 1.6;
@@ -1347,7 +1347,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 418, ../_sass/_BernardoUnitGS.scss */
+  /* line 417, ../_sass/_BernardoUnitGS.scss */
   #cv-links {
     font-size: 1em;
     line-height: 1.6;
@@ -1367,7 +1367,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 426, ../_sass/_BernardoUnitGS.scss */
+  /* line 425, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-role {
     font-size: 1em;
     line-height: 1.6;
@@ -1392,7 +1392,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 600px) */
 @media screen and (min-width: 37.5em) {
-  /* line 450, ../_sass/_BernardoUnitGS.scss */
+  /* line 449, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 3.2;
@@ -1415,7 +1415,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 452, ../_sass/_BernardoUnitGS.scss */
+  /* line 451, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 0.9em;
     line-height: 1.77778;
@@ -1427,7 +1427,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 460, ../_sass/_BernardoUnitGS.scss */
+  /* line 459, ../_sass/_BernardoUnitGS.scss */
   #logoandname {
     font-size: 1em;
     line-height: 1.6;
@@ -1448,13 +1448,13 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 464, ../_sass/_BernardoUnitGS.scss */
+  /* line 463, ../_sass/_BernardoUnitGS.scss */
   #headerName, #headerTitle {
     white-space: nowrap;
     text-indent: 42px;
   }
 
-  /* line 470, ../_sass/_BernardoUnitGS.scss */
+  /* line 469, ../_sass/_BernardoUnitGS.scss */
   #headerName {
     font-size: 1em;
     line-height: 1em;
@@ -1479,7 +1479,7 @@ p.tags:before {
     font-weight: bold;
   }
 
-  /* line 475, ../_sass/_BernardoUnitGS.scss */
+  /* line 474, ../_sass/_BernardoUnitGS.scss */
   #headerTitle {
     font-size: 0.85em;
     line-height: 1em;
@@ -1505,7 +1505,7 @@ p.tags:before {
     font-style: italic;
   }
 
-  /* line 482, ../_sass/_BernardoUnitGS.scss */
+  /* line 481, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage {
     font-size: 1em;
     line-height: 1.6;
@@ -1527,7 +1527,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 640px) */
 @media screen and (min-width: 40em) {
-  /* line 504, ../_sass/_BernardoUnitGS.scss */
+  /* line 503, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1em;
     line-height: 1.6;
@@ -1539,7 +1539,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 512, ../_sass/_BernardoUnitGS.scss */
+  /* line 511, ../_sass/_BernardoUnitGS.scss */
   #cv-links > ul {
     font-size: 1em;
     line-height: 1.6;
@@ -1562,7 +1562,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 516, ../_sass/_BernardoUnitGS.scss */
+  /* line 515, ../_sass/_BernardoUnitGS.scss */
   #linkedin-button {
     font-size: 1em;
     line-height: 1.6;
@@ -1585,7 +1585,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 527, ../_sass/_BernardoUnitGS.scss */
+  /* line 526, ../_sass/_BernardoUnitGS.scss */
   .post-header > h1 {
     font-size: 1.6em;
     line-height: 1;
@@ -1597,7 +1597,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 720px) */
 @media screen and (min-width: 45em) {
-  /* line 576, ../_sass/_BernardoUnitGS.scss */
+  /* line 575, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 3.2;
@@ -1620,7 +1620,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 578, ../_sass/_BernardoUnitGS.scss */
+  /* line 577, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1.1em;
     line-height: 1.45455;
@@ -1632,7 +1632,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 586, ../_sass/_BernardoUnitGS.scss */
+  /* line 585, ../_sass/_BernardoUnitGS.scss */
   #logoandname {
     font-size: 1em;
     line-height: 1.6;
@@ -1655,12 +1655,12 @@ p.tags:before {
     background-position: 0.8em 0.4em;
   }
 
-  /* line 592, ../_sass/_BernardoUnitGS.scss */
+  /* line 591, ../_sass/_BernardoUnitGS.scss */
   #headerName, #headerTitle {
     text-indent: 48px;
   }
 
-  /* line 596, ../_sass/_BernardoUnitGS.scss */
+  /* line 595, ../_sass/_BernardoUnitGS.scss */
   #headerName {
     font-size: 1.2em;
     line-height: 1em;
@@ -1684,7 +1684,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 599, ../_sass/_BernardoUnitGS.scss */
+  /* line 598, ../_sass/_BernardoUnitGS.scss */
   #headerTitle {
     font-size: 1em;
     line-height: 1em;
@@ -1708,7 +1708,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 604, ../_sass/_BernardoUnitGS.scss */
+  /* line 603, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage {
     font-size: 1em;
     line-height: 1.6;
@@ -1728,7 +1728,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 608, ../_sass/_BernardoUnitGS.scss */
+  /* line 607, ../_sass/_BernardoUnitGS.scss */
   #introduction-text {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -1742,7 +1742,17 @@ p.tags:before {
     column-gap: 1.6em;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 615, ../_sass/_BernardoUnitGS.scss */
+  #latest-projects #project-unitgs .project-title h2, #latest-projects #project-asDesigned .project-title h2 {
+    font-size: 1.6em;
+    line-height: 2;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .linkedin {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1750,7 +1760,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .wordpress {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1758,7 +1768,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .twitter {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1766,7 +1776,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .youtube {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1774,7 +1784,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .google {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1782,7 +1792,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 614, ../_sass/_BernardoUnitGS.scss */
+  /* line 624, ../_sass/_BernardoUnitGS.scss */
   .facebook {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1790,7 +1800,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 623, ../_sass/_BernardoUnitGS.scss */
+  /* line 633, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -1815,7 +1825,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 888px) */
 @media screen and (min-width: 55.5em) {
-  /* line 645, ../_sass/_BernardoUnitGS.scss */
+  /* line 655, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -1827,7 +1837,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 654, ../_sass/_BernardoUnitGS.scss */
+  /* line 664, ../_sass/_BernardoUnitGS.scss */
   #latest-projects #project-unitgs, #latest-projects #project-asDesigned {
     font-size: 1em;
     line-height: 1.6;
@@ -1847,7 +1857,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 659, ../_sass/_BernardoUnitGS.scss */
+  /* line 669, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink {
     font-size: 1em;
     line-height: 1.6;
@@ -1869,7 +1879,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 661, ../_sass/_BernardoUnitGS.scss */
+  /* line 671, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink:first {
     font-size: 1em;
     line-height: 1.6;
@@ -1891,7 +1901,7 @@ p.tags:before {
     clear: left;
     display: inline;
   }
-  /* line 662, ../_sass/_BernardoUnitGS.scss */
+  /* line 672, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink:last {
     font-size: 1em;
     line-height: 1.6;
@@ -1915,13 +1925,13 @@ p.tags:before {
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 680, ../_sass/_BernardoUnitGS.scss */
+  /* line 690, ../_sass/_BernardoUnitGS.scss */
   #asDesigned {
     max-width: 60em;
     margin: 0 auto;
   }
 
-  /* line 699, ../_sass/_BernardoUnitGS.scss */
+  /* line 709, ../_sass/_BernardoUnitGS.scss */
   .blog-post {
     font-size: 1em;
     line-height: 1.6;
@@ -1943,7 +1953,7 @@ p.tags:before {
     padding-right: 0em;
   }
 
-  /* line 705, ../_sass/_BernardoUnitGS.scss */
+  /* line 715, ../_sass/_BernardoUnitGS.scss */
   .post-header {
     font-size: 1em;
     line-height: 1.6;
@@ -1966,7 +1976,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 709, ../_sass/_BernardoUnitGS.scss */
+  /* line 719, ../_sass/_BernardoUnitGS.scss */
   .post-metadata {
     font-size: 1em;
     line-height: 1.6;
@@ -1989,7 +1999,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 713, ../_sass/_BernardoUnitGS.scss */
+  /* line 723, ../_sass/_BernardoUnitGS.scss */
   .post-header > h2 {
     display: inherit;
     font-size: 1em;
@@ -2002,12 +2012,12 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 721, ../_sass/_BernardoUnitGS.scss */
+  /* line 731, ../_sass/_BernardoUnitGS.scss */
   .metadata {
     display: inherit;
   }
 
-  /* line 726, ../_sass/_BernardoUnitGS.scss */
+  /* line 736, ../_sass/_BernardoUnitGS.scss */
   p.tags {
     font-size: 1em;
     line-height: 1.6;
@@ -2018,12 +2028,12 @@ p.tags:before {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 730, ../_sass/_BernardoUnitGS.scss */
+  /* line 740, ../_sass/_BernardoUnitGS.scss */
   p.tags:before {
     content: none;
   }
 
-  /* line 733, ../_sass/_BernardoUnitGS.scss */
+  /* line 743, ../_sass/_BernardoUnitGS.scss */
   .post-content {
     font-size: 1em;
     line-height: 1.6;
@@ -2046,7 +2056,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 737, ../_sass/_BernardoUnitGS.scss */
+  /* line 747, ../_sass/_BernardoUnitGS.scss */
   #post-comments {
     font-size: 1em;
     line-height: 1.6;
@@ -2069,7 +2079,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 742, ../_sass/_BernardoUnitGS.scss */
+  /* line 752, ../_sass/_BernardoUnitGS.scss */
   #cv-links {
     font-size: 1em;
     line-height: 1.6;
@@ -2090,7 +2100,7 @@ p.tags:before {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* line 747, ../_sass/_BernardoUnitGS.scss */
+  /* line 757, ../_sass/_BernardoUnitGS.scss */
   #cv-links > ul {
     font-size: 1em;
     line-height: 1.6;
@@ -2114,7 +2124,7 @@ p.tags:before {
     list-style-type: none;
   }
 
-  /* line 753, ../_sass/_BernardoUnitGS.scss */
+  /* line 763, ../_sass/_BernardoUnitGS.scss */
   #linkedin-button {
     font-size: 1em;
     line-height: 1.6;
@@ -2147,7 +2157,7 @@ p.tags:before {
     text-align: center;
   }
 
-  /* line 763, ../_sass/_BernardoUnitGS.scss */
+  /* line 773, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -2171,7 +2181,7 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 768, ../_sass/_BernardoUnitGS.scss */
+  /* line 778, ../_sass/_BernardoUnitGS.scss */
   #cv-skills-heading {
     font-size: 1em;
     line-height: 1.6;
@@ -2195,7 +2205,7 @@ p.tags:before {
     display: none;
   }
 
-  /* line 769, ../_sass/_BernardoUnitGS.scss */
+  /* line 779, ../_sass/_BernardoUnitGS.scss */
   #cv-skills-items {
     font-size: 1em;
     line-height: 1.6;
@@ -2219,7 +2229,7 @@ p.tags:before {
     display: none;
   }
 
-  /* line 772, ../_sass/_BernardoUnitGS.scss */
+  /* line 782, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-title {
     font-size: 1.618em;
     line-height: 1em;
@@ -2244,7 +2254,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 777, ../_sass/_BernardoUnitGS.scss */
+  /* line 787, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item {
     font-size: 1em;
     line-height: 1.6;
@@ -2264,7 +2274,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 779, ../_sass/_BernardoUnitGS.scss */
+  /* line 789, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-date {
     font-size: 1em;
     line-height: 1.6;
@@ -2288,7 +2298,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 783, ../_sass/_BernardoUnitGS.scss */
+  /* line 793, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-company {
     font-size: 1.618em;
     line-height: 1em;
@@ -2313,7 +2323,7 @@ p.tags:before {
     white-space: nowrap;
   }
 
-  /* line 787, ../_sass/_BernardoUnitGS.scss */
+  /* line 797, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-role {
     font-size: 1em;
     line-height: 1.6;
@@ -2337,7 +2347,7 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 791, ../_sass/_BernardoUnitGS.scss */
+  /* line 801, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-details {
     font-size: 1em;
     line-height: 1.6;
