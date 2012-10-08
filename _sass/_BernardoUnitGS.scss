@@ -178,6 +178,38 @@ body{
 
 #introduction-text { @include grid-unit(); }
 
+#latest-projects {
+	@include grid-unit($container-type: container, $margin-top: 1);
+	#latest-projects-title {
+		@include grid-unit($float: right, $container-type: contained, $margin-top: 1/2, $margin-bottom: 1/2);
+		h2 { color: $settings-colors-lightgray; }
+	}
+	
+	#project-unitgs, #project-asDesigned {
+		@include grid-unit($container-type: both, $margin-bottom: 1);
+		color: $settings-colors-verydarkgray;
+
+		.project-title {
+			@include grid-unit(1/2 fullrow, $height: 2, $container-type: contained);
+			
+			img {
+				width: 3.2em;
+				height: 3.2em;
+				margin-right: 0.8em;
+				float: left;
+			}
+
+			h2 {
+				@include grid-line($font-size: 1.4, $line-height: 2);
+				font-weight: normal;
+			}
+		}
+
+		p { @include grid-unit(1/2 fullrow, $container-type: contained); }
+
+	}
+}
+
 //Footer
 #layout-footer { @include grid-unit($container-type: container, $margin-top: 1); }
 
@@ -359,6 +391,17 @@ $void: debug-assert(utils-convert-pixels-to-ems(480px) == 30em,
 
 	#introduction-text { @include grid-unit($margin-top: 0);
 		margin-top: 0;
+	}
+
+
+	#latest-projects {
+		#project-unitgs, #project-asDesigned {
+			.project-title {
+				h2 {
+					@include grid-line($font-size: 1.6, $line-height: 2);
+				}
+			}
+		}
 	}
 
 	//Blog
@@ -603,6 +646,13 @@ $void: debug-assert(utils-convert-pixels-to-ems(600px) == 37.5em,
 			@include grid-line(1.2);	
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
+		}
+	}
+
+	#latest-projects {
+		
+		#project-unitgs, #project-asDesigned {
+			@include grid-unit(1/2, inner, $container-type: both, $margin-bottom: 1);
 		}
 	}
 
