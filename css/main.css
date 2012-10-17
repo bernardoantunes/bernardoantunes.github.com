@@ -196,9 +196,24 @@ body {
   color: #1a1c1d;
 }
 
+/* line 107, ../_sass/_BernardoUnitGS.scss */
+.svg-figure {
+  display: block;
+  text-align: center;
+}
+/* line 111, ../_sass/_BernardoUnitGS.scss */
+.svg-figure object {
+  margin-bottom: 1.6em;
+}
+/* line 112, ../_sass/_BernardoUnitGS.scss */
+.svg-figure object, .svg-figure img {
+  display: inline-block;
+  max-width: 100%;
+}
+
 /* ######################################################### */
 /*                       Unit Grid System                     */
-/* line 111, ../_sass/_BernardoUnitGS.scss */
+/* line 123, ../_sass/_BernardoUnitGS.scss */
 #page-content {
   font-size: 1em;
   line-height: 1.6;
@@ -221,22 +236,22 @@ body {
   display: inline;
 }
 
-/* line 113, ../_sass/_BernardoUnitGS.scss */
+/* line 125, ../_sass/_BernardoUnitGS.scss */
 .orangetext {
   color: #ffa13e;
 }
 
-/* line 115, ../_sass/_BernardoUnitGS.scss */
+/* line 127, ../_sass/_BernardoUnitGS.scss */
 .highlight {
   background-color: yellow;
 }
 
-/* line 118, ../_sass/_BernardoUnitGS.scss */
+/* line 130, ../_sass/_BernardoUnitGS.scss */
 .post-content img {
   max-width: 100%;
 }
 
-/* line 124, ../_sass/_BernardoUnitGS.scss */
+/* line 136, ../_sass/_BernardoUnitGS.scss */
 #mainnav {
   font-size: 1em;
   line-height: 3.2;
@@ -259,7 +274,7 @@ body {
   clear: none;
   display: inline;
 }
-/* line 127, ../_sass/_BernardoUnitGS.scss */
+/* line 139, ../_sass/_BernardoUnitGS.scss */
 #mainnav ul {
   margin: 0;
   padding: 0;
@@ -282,7 +297,7 @@ body {
   *display: inline;
   white-space: nowrap;
 }
-/* line 133, ../_sass/_BernardoUnitGS.scss */
+/* line 145, ../_sass/_BernardoUnitGS.scss */
 #mainnav ul > li > a {
   font-size: 0.85em;
   line-height: 1.88235;
@@ -299,7 +314,7 @@ body {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-/* line 145, ../_sass/_BernardoUnitGS.scss */
+/* line 157, ../_sass/_BernardoUnitGS.scss */
 #mainnav ul > li.current > a {
   background: #ffc383;
   -webkit-border-radius: 0.3125em;
@@ -309,7 +324,7 @@ body {
   border-radius: 0.3125em;
 }
 
-/* line 153, ../_sass/_BernardoUnitGS.scss */
+/* line 165, ../_sass/_BernardoUnitGS.scss */
 #logoandname {
   font-size: 1em;
   line-height: 1.6;
@@ -336,7 +351,7 @@ body {
   overflow: hidden;
 }
 
-/* line 163, ../_sass/_BernardoUnitGS.scss */
+/* line 175, ../_sass/_BernardoUnitGS.scss */
 #headerName, #headerTitle {
   display: block;
   text-indent: -119988px;
@@ -344,7 +359,7 @@ body {
   text-align: left;
 }
 
-/* line 169, ../_sass/_BernardoUnitGS.scss */
+/* line 181, ../_sass/_BernardoUnitGS.scss */
 #welcomeMessage {
   font-size: 1em;
   line-height: 1.6;
@@ -364,7 +379,7 @@ body {
   *zoom: 1;
 }
 
-/* line 171, ../_sass/_BernardoUnitGS.scss */
+/* line 183, ../_sass/_BernardoUnitGS.scss */
 #welcomeMessage > img {
   font-size: 1em;
   line-height: 1.6;
@@ -387,7 +402,7 @@ body {
   display: inline;
 }
 
-/* line 172, ../_sass/_BernardoUnitGS.scss */
+/* line 184, ../_sass/_BernardoUnitGS.scss */
 #welcomeMessage > div {
   font-size: 1em;
   line-height: 1.6;
@@ -410,14 +425,14 @@ body {
   display: inline;
 }
 
-/* line 173, ../_sass/_BernardoUnitGS.scss */
+/* line 185, ../_sass/_BernardoUnitGS.scss */
 #welcomeMessage > div > p {
   font-size: 5.25em;
   line-height: 1em;
   color: #3f3e3d;
 }
 
-/* line 179, ../_sass/_BernardoUnitGS.scss */
+/* line 191, ../_sass/_BernardoUnitGS.scss */
 #introduction-text {
   font-size: 1em;
   line-height: 1.6;
@@ -440,7 +455,7 @@ body {
   display: inline;
 }
 
-/* line 181, ../_sass/_BernardoUnitGS.scss */
+/* line 193, ../_sass/_BernardoUnitGS.scss */
 #latest-projects {
   font-size: 1em;
   line-height: 1.6;
@@ -459,7 +474,7 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 183, ../_sass/_BernardoUnitGS.scss */
+/* line 195, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #latest-projects-title {
   font-size: 1em;
   line-height: 1.6;
@@ -481,11 +496,11 @@ body {
   clear: both;
   display: inline;
 }
-/* line 185, ../_sass/_BernardoUnitGS.scss */
+/* line 197, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #latest-projects-title h2 {
   color: #7b7b7b;
 }
-/* line 188, ../_sass/_BernardoUnitGS.scss */
+/* line 200, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #project-unitgs, #latest-projects #project-asDesigned {
   font-size: 1em;
   line-height: 1.6;
@@ -505,7 +520,7 @@ body {
   *zoom: 1;
   color: #1a1c1d;
 }
-/* line 192, ../_sass/_BernardoUnitGS.scss */
+/* line 204, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #project-unitgs .project-title, #latest-projects #project-asDesigned .project-title {
   font-size: 1em;
   line-height: 1.6;
@@ -528,14 +543,14 @@ body {
   clear: both;
   display: inline;
 }
-/* line 195, ../_sass/_BernardoUnitGS.scss */
+/* line 207, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #project-unitgs .project-title img, #latest-projects #project-asDesigned .project-title img {
   width: 3.2em;
   height: 3.2em;
   margin-right: 0.8em;
   float: left;
 }
-/* line 202, ../_sass/_BernardoUnitGS.scss */
+/* line 214, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #project-unitgs .project-title h2, #latest-projects #project-asDesigned .project-title h2 {
   font-size: 1.4em;
   line-height: 2.28571;
@@ -545,7 +560,7 @@ body {
   margin-bottom: 0;
   font-weight: normal;
 }
-/* line 208, ../_sass/_BernardoUnitGS.scss */
+/* line 220, ../_sass/_BernardoUnitGS.scss */
 #latest-projects #project-unitgs p, #latest-projects #project-asDesigned p {
   font-size: 1em;
   line-height: 1.6;
@@ -568,7 +583,7 @@ body {
   display: inline;
 }
 
-/* line 214, ../_sass/_BernardoUnitGS.scss */
+/* line 226, ../_sass/_BernardoUnitGS.scss */
 #layout-footer {
   font-size: 1em;
   line-height: 1.6;
@@ -588,7 +603,7 @@ body {
   *zoom: 1;
 }
 
-/* line 216, ../_sass/_BernardoUnitGS.scss */
+/* line 228, ../_sass/_BernardoUnitGS.scss */
 #layout-footer .sociallink {
   font-size: 0.8em;
   line-height: 2;
@@ -610,7 +625,7 @@ body {
   clear: none;
   display: inline;
 }
-/* line 218, ../_sass/_BernardoUnitGS.scss */
+/* line 230, ../_sass/_BernardoUnitGS.scss */
 #layout-footer .sociallink:first {
   font-size: 0.8em;
   line-height: 2;
@@ -632,7 +647,7 @@ body {
   clear: left;
   display: inline;
 }
-/* line 219, ../_sass/_BernardoUnitGS.scss */
+/* line 231, ../_sass/_BernardoUnitGS.scss */
 #layout-footer .sociallink:last {
   font-size: 0.8em;
   line-height: 2;
@@ -655,7 +670,7 @@ body {
   display: inline;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .linkedin {
   display: block;
   text-indent: -119988px;
@@ -666,7 +681,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .wordpress {
   display: block;
   text-indent: -119988px;
@@ -677,7 +692,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .twitter {
   display: block;
   text-indent: -119988px;
@@ -688,7 +703,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .youtube {
   display: block;
   text-indent: -119988px;
@@ -699,7 +714,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .google {
   display: block;
   text-indent: -119988px;
@@ -710,7 +725,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 224, ../_sass/_BernardoUnitGS.scss */
+/* line 236, ../_sass/_BernardoUnitGS.scss */
 .facebook {
   display: block;
   text-indent: -119988px;
@@ -721,7 +736,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* line 230, ../_sass/_BernardoUnitGS.scss */
+/* line 242, ../_sass/_BernardoUnitGS.scss */
 #layout-footer #copyright {
   font-size: 0.8em;
   line-height: 2;
@@ -746,12 +761,12 @@ body {
   color: #3f3e3d;
 }
 
-/* line 237, ../_sass/_BernardoUnitGS.scss */
+/* line 249, ../_sass/_BernardoUnitGS.scss */
 ul.blog-posts > li {
   list-style-type: none;
 }
 
-/* line 242, ../_sass/_BernardoUnitGS.scss */
+/* line 254, ../_sass/_BernardoUnitGS.scss */
 .blog-post {
   font-size: 1em;
   line-height: 1.6;
@@ -774,7 +789,7 @@ ul.blog-posts > li {
   display: inline;
 }
 
-/* line 246, ../_sass/_BernardoUnitGS.scss */
+/* line 258, ../_sass/_BernardoUnitGS.scss */
 .post-header > h1 {
   font-size: 1.33333em;
   line-height: 1.2;
@@ -786,17 +801,17 @@ ul.blog-posts > li {
   font-style: italic;
 }
 
-/* line 253, ../_sass/_BernardoUnitGS.scss */
+/* line 265, ../_sass/_BernardoUnitGS.scss */
 .post-header > h2 {
   display: none;
 }
 
-/* line 257, ../_sass/_BernardoUnitGS.scss */
+/* line 269, ../_sass/_BernardoUnitGS.scss */
 .metadata {
   display: none;
 }
 
-/* line 261, ../_sass/_BernardoUnitGS.scss */
+/* line 273, ../_sass/_BernardoUnitGS.scss */
 p.tags {
   font-size: 0.85em;
   line-height: 1.88235;
@@ -806,13 +821,13 @@ p.tags {
   margin-bottom: 0;
   color: #7b7b7b;
 }
-/* line 264, ../_sass/_BernardoUnitGS.scss */
+/* line 276, ../_sass/_BernardoUnitGS.scss */
 p.tags:before {
   color: #1a1c1d;
   content: "about ";
 }
 
-/* line 269, ../_sass/_BernardoUnitGS.scss */
+/* line 281, ../_sass/_BernardoUnitGS.scss */
 .post-content h1, .post-content h2, #page-content h1, #page-content h2 {
   font-size: 1.2em;
   line-height: 1.33333;
@@ -824,7 +839,7 @@ p.tags:before {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 277, ../_sass/_BernardoUnitGS.scss */
+/* line 289, ../_sass/_BernardoUnitGS.scss */
 .post-content p, .post-content ul, #page-content p, #page-content ul {
   font-size: 1em;
   line-height: 1.6;
@@ -834,7 +849,7 @@ p.tags:before {
   margin-bottom: 1.6em;
 }
 
-/* line 282, ../_sass/_BernardoUnitGS.scss */
+/* line 294, ../_sass/_BernardoUnitGS.scss */
 #post-comments {
   font-size: 1em;
   line-height: 1.6;
@@ -854,7 +869,7 @@ p.tags:before {
   *zoom: 1;
 }
 
-/* line 287, ../_sass/_BernardoUnitGS.scss */
+/* line 299, ../_sass/_BernardoUnitGS.scss */
 #cv-introtext {
   font-size: 1.2em;
   line-height: 1.33333;
@@ -878,7 +893,7 @@ p.tags:before {
   color: #3f3e3d;
 }
 
-/* line 292, ../_sass/_BernardoUnitGS.scss */
+/* line 304, ../_sass/_BernardoUnitGS.scss */
 #cv-links {
   font-size: 1em;
   line-height: 1.6;
@@ -897,7 +912,7 @@ p.tags:before {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 295, ../_sass/_BernardoUnitGS.scss */
+/* line 307, ../_sass/_BernardoUnitGS.scss */
 #cv-links > ul {
   font-size: 1em;
   line-height: 1.6;
@@ -921,7 +936,7 @@ p.tags:before {
   list-style-type: none;
 }
 
-/* line 301, ../_sass/_BernardoUnitGS.scss */
+/* line 313, ../_sass/_BernardoUnitGS.scss */
 #linkedin-button {
   font-size: 1em;
   line-height: 1.6;
@@ -954,7 +969,7 @@ p.tags:before {
   text-align: center;
 }
 
-/* line 311, ../_sass/_BernardoUnitGS.scss */
+/* line 323, ../_sass/_BernardoUnitGS.scss */
 #cv-skills-heading {
   font-size: 1em;
   line-height: 1.6;
@@ -978,7 +993,7 @@ p.tags:before {
   display: none;
 }
 
-/* line 312, ../_sass/_BernardoUnitGS.scss */
+/* line 324, ../_sass/_BernardoUnitGS.scss */
 #cv-skills-items {
   font-size: 1em;
   line-height: 1.6;
@@ -1002,7 +1017,7 @@ p.tags:before {
   display: none;
 }
 
-/* line 315, ../_sass/_BernardoUnitGS.scss */
+/* line 327, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-title {
   font-size: 2.13333em;
   line-height: 1.5;
@@ -1026,7 +1041,7 @@ p.tags:before {
   color: #3f3e3d;
 }
 
-/* line 320, ../_sass/_BernardoUnitGS.scss */
+/* line 332, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-item {
   font-size: 1em;
   line-height: 1.6;
@@ -1046,7 +1061,7 @@ p.tags:before {
   *zoom: 1;
 }
 
-/* line 322, ../_sass/_BernardoUnitGS.scss */
+/* line 334, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-item-header-date {
   font-size: 1em;
   line-height: 1.6;
@@ -1070,7 +1085,7 @@ p.tags:before {
   color: #3f3e3d;
 }
 
-/* line 326, ../_sass/_BernardoUnitGS.scss */
+/* line 338, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-item-header-company {
   font-size: 1.618em;
   line-height: 1em;
@@ -1096,7 +1111,7 @@ p.tags:before {
   white-space: nowrap;
 }
 
-/* line 331, ../_sass/_BernardoUnitGS.scss */
+/* line 343, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-item-header-role {
   font-size: 1.2em;
   line-height: 1.33333;
@@ -1120,7 +1135,7 @@ p.tags:before {
   color: #7b7b7b;
 }
 
-/* line 335, ../_sass/_BernardoUnitGS.scss */
+/* line 347, ../_sass/_BernardoUnitGS.scss */
 .cv-exp-item-details {
   font-size: 1em;
   line-height: 1.6;
@@ -1150,7 +1165,7 @@ p.tags:before {
     font-size: 1.125em;
   }
 
-  /* line 372, ../_sass/_BernardoUnitGS.scss */
+  /* line 384, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 3.2;
@@ -1176,7 +1191,7 @@ p.tags:before {
     margin-bottom: 0;
   }
 
-  /* line 377, ../_sass/_BernardoUnitGS.scss */
+  /* line 389, ../_sass/_BernardoUnitGS.scss */
   #logoandname {
     font-size: 1em;
     line-height: 1.6;
@@ -1199,7 +1214,7 @@ p.tags:before {
     margin-bottom: 0;
   }
 
-  /* line 384, ../_sass/_BernardoUnitGS.scss */
+  /* line 396, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage {
     font-size: 1em;
     line-height: 1.6;
@@ -1219,7 +1234,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 385, ../_sass/_BernardoUnitGS.scss */
+  /* line 397, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage > img {
     font-size: 1em;
     line-height: 1.6;
@@ -1242,7 +1257,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 386, ../_sass/_BernardoUnitGS.scss */
+  /* line 398, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage > div {
     font-size: 1em;
     line-height: 1.6;
@@ -1267,7 +1282,7 @@ p.tags:before {
     margin-bottom: 0;
   }
 
-  /* line 392, ../_sass/_BernardoUnitGS.scss */
+  /* line 404, ../_sass/_BernardoUnitGS.scss */
   #introduction-text {
     font-size: 1em;
     line-height: 1.6;
@@ -1291,7 +1306,7 @@ p.tags:before {
     margin-top: 0;
   }
 
-  /* line 399, ../_sass/_BernardoUnitGS.scss */
+  /* line 411, ../_sass/_BernardoUnitGS.scss */
   #latest-projects #project-unitgs .project-title h2, #latest-projects #project-asDesigned .project-title h2 {
     font-size: 1.5em;
     line-height: 2.13333;
@@ -1301,7 +1316,7 @@ p.tags:before {
     margin-bottom: 0;
   }
 
-  /* line 407, ../_sass/_BernardoUnitGS.scss */
+  /* line 419, ../_sass/_BernardoUnitGS.scss */
   .blog-post {
     font-size: 1em;
     line-height: 1.6;
@@ -1324,7 +1339,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 413, ../_sass/_BernardoUnitGS.scss */
+  /* line 425, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1em;
     line-height: 1.6;
@@ -1347,7 +1362,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 417, ../_sass/_BernardoUnitGS.scss */
+  /* line 429, ../_sass/_BernardoUnitGS.scss */
   #cv-links {
     font-size: 1em;
     line-height: 1.6;
@@ -1367,7 +1382,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 425, ../_sass/_BernardoUnitGS.scss */
+  /* line 437, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-role {
     font-size: 1em;
     line-height: 1.6;
@@ -1392,7 +1407,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 600px) */
 @media screen and (min-width: 37.5em) {
-  /* line 449, ../_sass/_BernardoUnitGS.scss */
+  /* line 461, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 3.2;
@@ -1415,7 +1430,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 451, ../_sass/_BernardoUnitGS.scss */
+  /* line 463, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 0.9em;
     line-height: 1.77778;
@@ -1427,7 +1442,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 459, ../_sass/_BernardoUnitGS.scss */
+  /* line 471, ../_sass/_BernardoUnitGS.scss */
   #logoandname {
     font-size: 1em;
     line-height: 1.6;
@@ -1448,13 +1463,13 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 463, ../_sass/_BernardoUnitGS.scss */
+  /* line 475, ../_sass/_BernardoUnitGS.scss */
   #headerName, #headerTitle {
     white-space: nowrap;
     text-indent: 42px;
   }
 
-  /* line 469, ../_sass/_BernardoUnitGS.scss */
+  /* line 481, ../_sass/_BernardoUnitGS.scss */
   #headerName {
     font-size: 1em;
     line-height: 1em;
@@ -1479,7 +1494,7 @@ p.tags:before {
     font-weight: bold;
   }
 
-  /* line 474, ../_sass/_BernardoUnitGS.scss */
+  /* line 486, ../_sass/_BernardoUnitGS.scss */
   #headerTitle {
     font-size: 0.85em;
     line-height: 1em;
@@ -1505,7 +1520,7 @@ p.tags:before {
     font-style: italic;
   }
 
-  /* line 481, ../_sass/_BernardoUnitGS.scss */
+  /* line 493, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage {
     font-size: 1em;
     line-height: 1.6;
@@ -1527,7 +1542,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 640px) */
 @media screen and (min-width: 40em) {
-  /* line 503, ../_sass/_BernardoUnitGS.scss */
+  /* line 515, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1em;
     line-height: 1.6;
@@ -1539,7 +1554,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 511, ../_sass/_BernardoUnitGS.scss */
+  /* line 523, ../_sass/_BernardoUnitGS.scss */
   #cv-links > ul {
     font-size: 1em;
     line-height: 1.6;
@@ -1562,7 +1577,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 515, ../_sass/_BernardoUnitGS.scss */
+  /* line 527, ../_sass/_BernardoUnitGS.scss */
   #linkedin-button {
     font-size: 1em;
     line-height: 1.6;
@@ -1585,7 +1600,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 526, ../_sass/_BernardoUnitGS.scss */
+  /* line 538, ../_sass/_BernardoUnitGS.scss */
   .post-header > h1 {
     font-size: 1.6em;
     line-height: 1;
@@ -1597,7 +1612,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 720px) */
 @media screen and (min-width: 45em) {
-  /* line 575, ../_sass/_BernardoUnitGS.scss */
+  /* line 587, ../_sass/_BernardoUnitGS.scss */
   #mainnav {
     font-size: 1em;
     line-height: 3.2;
@@ -1620,7 +1635,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 577, ../_sass/_BernardoUnitGS.scss */
+  /* line 589, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1.1em;
     line-height: 1.45455;
@@ -1632,7 +1647,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 585, ../_sass/_BernardoUnitGS.scss */
+  /* line 597, ../_sass/_BernardoUnitGS.scss */
   #logoandname {
     font-size: 1em;
     line-height: 1.6;
@@ -1655,12 +1670,12 @@ p.tags:before {
     background-position: 0.8em 0.4em;
   }
 
-  /* line 591, ../_sass/_BernardoUnitGS.scss */
+  /* line 603, ../_sass/_BernardoUnitGS.scss */
   #headerName, #headerTitle {
     text-indent: 48px;
   }
 
-  /* line 595, ../_sass/_BernardoUnitGS.scss */
+  /* line 607, ../_sass/_BernardoUnitGS.scss */
   #headerName {
     font-size: 1.2em;
     line-height: 1em;
@@ -1684,7 +1699,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 598, ../_sass/_BernardoUnitGS.scss */
+  /* line 610, ../_sass/_BernardoUnitGS.scss */
   #headerTitle {
     font-size: 1em;
     line-height: 1em;
@@ -1708,7 +1723,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 603, ../_sass/_BernardoUnitGS.scss */
+  /* line 615, ../_sass/_BernardoUnitGS.scss */
   #welcomeMessage {
     font-size: 1em;
     line-height: 1.6;
@@ -1728,7 +1743,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 607, ../_sass/_BernardoUnitGS.scss */
+  /* line 619, ../_sass/_BernardoUnitGS.scss */
   #introduction-text {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -1742,7 +1757,7 @@ p.tags:before {
     column-gap: 1.6em;
   }
 
-  /* line 615, ../_sass/_BernardoUnitGS.scss */
+  /* line 627, ../_sass/_BernardoUnitGS.scss */
   #latest-projects #project-unitgs .project-title h2, #latest-projects #project-asDesigned .project-title h2 {
     font-size: 1.6em;
     line-height: 2;
@@ -1752,7 +1767,7 @@ p.tags:before {
     margin-bottom: 0;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .linkedin {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1760,7 +1775,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .wordpress {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1768,7 +1783,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .twitter {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1776,7 +1791,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .youtube {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1784,7 +1799,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .google {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1792,7 +1807,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 624, ../_sass/_BernardoUnitGS.scss */
+  /* line 636, ../_sass/_BernardoUnitGS.scss */
   .facebook {
     background-position: 0px 50%;
     text-indent: 24px;
@@ -1800,7 +1815,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 633, ../_sass/_BernardoUnitGS.scss */
+  /* line 645, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -1825,7 +1840,7 @@ p.tags:before {
 }
 /* @media screen and (min-width: 888px) */
 @media screen and (min-width: 55.5em) {
-  /* line 655, ../_sass/_BernardoUnitGS.scss */
+  /* line 667, ../_sass/_BernardoUnitGS.scss */
   #mainnav ul > li > a {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -1837,7 +1852,7 @@ p.tags:before {
     padding-bottom: 0.5em;
   }
 
-  /* line 664, ../_sass/_BernardoUnitGS.scss */
+  /* line 676, ../_sass/_BernardoUnitGS.scss */
   #latest-projects #project-unitgs, #latest-projects #project-asDesigned {
     font-size: 1em;
     line-height: 1.6;
@@ -1857,7 +1872,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 669, ../_sass/_BernardoUnitGS.scss */
+  /* line 681, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink {
     font-size: 1em;
     line-height: 1.6;
@@ -1879,7 +1894,7 @@ p.tags:before {
     clear: none;
     display: inline;
   }
-  /* line 671, ../_sass/_BernardoUnitGS.scss */
+  /* line 683, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink:first {
     font-size: 1em;
     line-height: 1.6;
@@ -1901,7 +1916,7 @@ p.tags:before {
     clear: left;
     display: inline;
   }
-  /* line 672, ../_sass/_BernardoUnitGS.scss */
+  /* line 684, ../_sass/_BernardoUnitGS.scss */
   #layout-footer .sociallink:last {
     font-size: 1em;
     line-height: 1.6;
@@ -1925,13 +1940,13 @@ p.tags:before {
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 690, ../_sass/_BernardoUnitGS.scss */
+  /* line 702, ../_sass/_BernardoUnitGS.scss */
   #asDesigned {
     max-width: 60em;
     margin: 0 auto;
   }
 
-  /* line 709, ../_sass/_BernardoUnitGS.scss */
+  /* line 721, ../_sass/_BernardoUnitGS.scss */
   .blog-post {
     font-size: 1em;
     line-height: 1.6;
@@ -1953,7 +1968,7 @@ p.tags:before {
     padding-right: 0em;
   }
 
-  /* line 715, ../_sass/_BernardoUnitGS.scss */
+  /* line 727, ../_sass/_BernardoUnitGS.scss */
   .post-header {
     font-size: 1em;
     line-height: 1.6;
@@ -1976,7 +1991,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 719, ../_sass/_BernardoUnitGS.scss */
+  /* line 731, ../_sass/_BernardoUnitGS.scss */
   .post-metadata {
     font-size: 1em;
     line-height: 1.6;
@@ -1999,7 +2014,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 723, ../_sass/_BernardoUnitGS.scss */
+  /* line 735, ../_sass/_BernardoUnitGS.scss */
   .post-header > h2 {
     display: inherit;
     font-size: 1em;
@@ -2012,12 +2027,12 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 731, ../_sass/_BernardoUnitGS.scss */
+  /* line 743, ../_sass/_BernardoUnitGS.scss */
   .metadata {
     display: inherit;
   }
 
-  /* line 736, ../_sass/_BernardoUnitGS.scss */
+  /* line 748, ../_sass/_BernardoUnitGS.scss */
   p.tags {
     font-size: 1em;
     line-height: 1.6;
@@ -2028,12 +2043,12 @@ p.tags:before {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 740, ../_sass/_BernardoUnitGS.scss */
+  /* line 752, ../_sass/_BernardoUnitGS.scss */
   p.tags:before {
     content: none;
   }
 
-  /* line 743, ../_sass/_BernardoUnitGS.scss */
+  /* line 755, ../_sass/_BernardoUnitGS.scss */
   .post-content {
     font-size: 1em;
     line-height: 1.6;
@@ -2056,7 +2071,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 747, ../_sass/_BernardoUnitGS.scss */
+  /* line 759, ../_sass/_BernardoUnitGS.scss */
   #post-comments {
     font-size: 1em;
     line-height: 1.6;
@@ -2079,7 +2094,7 @@ p.tags:before {
     display: inline;
   }
 
-  /* line 752, ../_sass/_BernardoUnitGS.scss */
+  /* line 764, ../_sass/_BernardoUnitGS.scss */
   #cv-links {
     font-size: 1em;
     line-height: 1.6;
@@ -2100,7 +2115,7 @@ p.tags:before {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* line 757, ../_sass/_BernardoUnitGS.scss */
+  /* line 769, ../_sass/_BernardoUnitGS.scss */
   #cv-links > ul {
     font-size: 1em;
     line-height: 1.6;
@@ -2124,7 +2139,7 @@ p.tags:before {
     list-style-type: none;
   }
 
-  /* line 763, ../_sass/_BernardoUnitGS.scss */
+  /* line 775, ../_sass/_BernardoUnitGS.scss */
   #linkedin-button {
     font-size: 1em;
     line-height: 1.6;
@@ -2157,7 +2172,7 @@ p.tags:before {
     text-align: center;
   }
 
-  /* line 773, ../_sass/_BernardoUnitGS.scss */
+  /* line 785, ../_sass/_BernardoUnitGS.scss */
   #cv-introtext {
     font-size: 1.2em;
     line-height: 1.33333;
@@ -2181,7 +2196,7 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 778, ../_sass/_BernardoUnitGS.scss */
+  /* line 790, ../_sass/_BernardoUnitGS.scss */
   #cv-skills-heading {
     font-size: 1em;
     line-height: 1.6;
@@ -2205,7 +2220,7 @@ p.tags:before {
     display: none;
   }
 
-  /* line 779, ../_sass/_BernardoUnitGS.scss */
+  /* line 791, ../_sass/_BernardoUnitGS.scss */
   #cv-skills-items {
     font-size: 1em;
     line-height: 1.6;
@@ -2229,7 +2244,7 @@ p.tags:before {
     display: none;
   }
 
-  /* line 782, ../_sass/_BernardoUnitGS.scss */
+  /* line 794, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-title {
     font-size: 1.618em;
     line-height: 1em;
@@ -2254,7 +2269,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 787, ../_sass/_BernardoUnitGS.scss */
+  /* line 799, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item {
     font-size: 1em;
     line-height: 1.6;
@@ -2274,7 +2289,7 @@ p.tags:before {
     *zoom: 1;
   }
 
-  /* line 789, ../_sass/_BernardoUnitGS.scss */
+  /* line 801, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-date {
     font-size: 1em;
     line-height: 1.6;
@@ -2298,7 +2313,7 @@ p.tags:before {
     color: #3f3e3d;
   }
 
-  /* line 793, ../_sass/_BernardoUnitGS.scss */
+  /* line 805, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-company {
     font-size: 1.618em;
     line-height: 1em;
@@ -2323,7 +2338,7 @@ p.tags:before {
     white-space: nowrap;
   }
 
-  /* line 797, ../_sass/_BernardoUnitGS.scss */
+  /* line 809, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-header-role {
     font-size: 1em;
     line-height: 1.6;
@@ -2347,7 +2362,7 @@ p.tags:before {
     color: #7b7b7b;
   }
 
-  /* line 801, ../_sass/_BernardoUnitGS.scss */
+  /* line 813, ../_sass/_BernardoUnitGS.scss */
   .cv-exp-item-details {
     font-size: 1em;
     line-height: 1.6;

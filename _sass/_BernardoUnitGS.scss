@@ -104,6 +104,18 @@ body{
 	color: $settings-colors-verydarkgray;
 }
 
+.svg-figure {
+	
+	display: block;
+	text-align: center;
+	object { margin-bottom: 1.6em; }
+	object, img {
+		display: inline-block;
+		max-width: 100%;
+	}
+
+}
+
 /* ######################################################### */
 /*                       Unit Grid System                     */
 
