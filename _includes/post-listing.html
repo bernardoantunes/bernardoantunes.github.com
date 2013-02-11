@@ -1,5 +1,7 @@
         <ul class="blog-posts content-items">
           {% for post in posts limit: listing_limit %}
+            {% if post.draft != true %}
+          
             <li>
                 <article class="content-item blog-post">
                     <header class="post-header">
@@ -22,6 +24,7 @@
                     </div>
                 </article>
             </li>  
+            {% endif %}
           {% endfor %}
         </ul>
 
