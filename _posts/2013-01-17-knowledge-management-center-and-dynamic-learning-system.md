@@ -3,7 +3,7 @@ layout: post
 title: Knowledge Management Center and Dynamic Learning System
 byline: A solution to the intricacies of volatile polymorphic knowledge
 category: Worktime Stories
-draft: true
+draft: false
 tags:
 - Human Resources
 - Knowledge Management
@@ -47,13 +47,13 @@ I must tell you that is not just possible, but that it is most probable that a b
 
 Most persons think about knowledge as an abstract topic extremely difficult (if not impossible) to control and manage.
 
-The common knowledge tell us that the human being is a system with flaws and that it is not possible to make a precise management about each element's knowledge, and as a consequence the company must accept its unfortunately correlation to this human flaw.
+The common knowledge tells us that the human being is a system with flaws and that it is not possible to make a precise mesurement about each element's knowledge, and as a consequence the company must accept its unfortunate correlation to this human flaw.
 Although the idea that I just described seems correct, the truth is that this idea/notion is completely *wrong*.
 
 The first thing that we need to have always in our minds is that humans have characteristics that are completely different than of the machines, and if we know which are humans strengths and weaknesses we can implement a system that is built to address and work with those characteristics.
-It mandatory to stop to expect humans to behave as machines, and start using better our strong points while minimizing our "weaknesses".
+It's mandatory to stop to expect humans to behave as machines, and start using better our strong points while minimizing our "weaknesses".
 
-In the future, any company that wont have a knowledge management system and strategy that allows it to manage, control, motorize and act upon all the elements in the company (humans and systems) will be destined to fail or fall behind the updated competition.
+In the future, any company that won't have a knowledge management system and strategy that allows it to manage, control, monitorize and act upon all the elements in the company (humans and systems) will be destined to fail or fall behind the updated competition.
 
 #The Concept of Knowledge
 
@@ -69,14 +69,24 @@ Knowledge in its broader definition is everything, even the hardware systems are
 
 In a company everything is knowledge and everything creates knowledge. Every system or human, has the ability to create, transform and exchange knowledge.
 
-[Figure 1 - De onde vem o conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/source-of-knowledge.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/source-of-knowledge.png" alt="Source of knowledge">
+  </object>
+</figure>
+[Figure 1 - Source of knowledge]
 
 ##Amount of knowledge
 
 Although essential, knowledge can easily became too heavy and difficult to manage. Too much knowledge can damage as much as too few.
-If we assign to a specific element more knowledge than he really needs to the execution of his functions, we will be expending more energy than necessary without added value, it will be more difficult to maintain him updated, and the probably of forgetting important details increases substantially.
+If we assign to a specific element more knowledge than he really needs to the execution of his functions, we will be expending more energy than necessary without added value, it will be more difficult to maintain him updated, and the probability of forgetting important details increases substantially.
 
-[Figure 2 - Quantidade do conhecimento do Utilizador]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge.png" alt="My Knowledge">
+  </object>
+</figure>
+[Figure 2 - My Knowledge]
 
 #Actors
 
@@ -112,8 +122,13 @@ So, what happen when everything changes? It shouldn't be that bad, you just have
 When you give to a person new rules that are similar but not the same, probably you will have persons that understand the differences and learn the new rules, the ones that will mix the new rules with the old ones, the ones that will just continue to follow the old ones and of course the creative ones that will always surprise us.
 
 (Knowledge dependencies, if you don't have the foundations, you will not be able to build upon them.)
- 
-[Figure 3 - Como é feita a absorção do conhecimento]
+
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/how-the-absorption-is-done.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/how-the-absorption-is-done.png" alt="How the absorption is done">
+  </object>
+</figure>
+[Figure 3 - how the absorption is done]
 
 We can conclude that, the individual is only a part of what defines a company, but it is an essential element of the global information system that needs to be perfectly updated so that everything works correctly.
 
@@ -122,7 +137,12 @@ We can conclude that, the individual is only a part of what defines a company, b
 The Information Systems have been the most forgotten intervener in knowledge, but they have a big part of the information necessary to share, and are the systems in their own context that have the information that allows us to know which knowledge each element should have in a specific moment.
 This is without a doubt the missed element by almost all the knowledge management systems, and it is precisely here where we will make our system fully functional.
 
-[Figure 4 - O conhecimento perdido dos sistemas]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-lost-in-systems.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-lost-in-systems.png" alt="Knowledge lost in systems">
+  </object>
+</figure>
+[Figure 4 - knowledge lost in systems]
 
 # Knowledge Management
 
@@ -134,7 +154,12 @@ But what he is expected to know he needs to know 100% (or very close to it).
  
 Now that we have introduced the Actors in story, lets introduce the roles that they will need to perform.
 
-[Figure 5 - Roles no Conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/roles-in-knowledge.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/roles-in-knowledge.png" alt="Roles in knowledge">
+  </object>
+</figure>
+[Figure 5 - roles in knowledge]
 
 ### User
 
@@ -173,7 +198,12 @@ But, waiting the elements to go search and consult the documentation, it only se
 The Knowledge Management System integrates automatically with all the events that occurs in the company's systems, that meaning that when a new element is integrated in a project, this element must have all the documentation to be able to work on that project and this applies to all the perspectives in the project, from the role that the new element is going to perform, the methodology used, internal rules, technical documents, support documents, starting guides, etc.. It is impossible to make all this management of knowledge manually, all this actions need to be automatic.
 Any company to be efficient, needs that 80% its knowledge management is done automatically and managed by its internal systems.
 
-[Figure 6 - Atribuição automática de conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/automatic-knowledge-assignment.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/automatic-knowledge-assignment.png" alt="Automatic knowledge assignment">
+  </object>
+</figure>
+[Figure 6 - automatic knowledge assignment]
 
 ## Knowledge Synchronization
 
@@ -183,12 +213,22 @@ Knowledge propagation is something that has to be synchronized, it should not ex
 
 The knowledge propagation system needs to be centralized to minimize message deturpation.
 
-[Figure 7 - Efeitos da passagem de conhecimento por corrente]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-chain-propagation.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-chain-propagation.png" alt="Knowledge chain propagation">
+  </object>
+</figure>
+[Figure 7 - knowledge chain propagation]
 1 -> 0.9 -> 0.8 -> 0.6
 
 You can see in the figure above, the quality of knowledge degrades with each link of knowledge propagation.
 
-[Figure 8 - Atribuição de conhecimento centralizada]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-centralized-propagation.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-centralized-propagation.png" alt="Knowledge centralized propagation">
+  </object>
+</figure>
+[Figure 8 - knowledge centralized propagation]
 1 -> 0.9
 
 In a centralized knowledge source and distribution, the knowledge degradation is at its minimum.
@@ -215,11 +255,21 @@ The Document is the main unit of the knowledge management system. The document i
 
 - Survey - each document has a set of questions with multiple answers that are used to verify if the user understood its content.
 
-[Figure 9 - Questionário de Conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/survey.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/survey.png" alt="Survey">
+  </object>
+</figure>
+[Figure 9 - survey]
 
 - Dependency
- 
-[Figure 10 - Dependência de Documentos]
+
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/document-dependencies.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/document-dependencies.png" alt="Document dependencies">
+  </object>
+</figure>
+[Figure 10 - document dependencies]
 
 We can verify in the figure above that any document can have a dependency on zero or more documents. This dependency system is essential to maintain the consistency between documents warning to review all dependent documents.
 
@@ -260,7 +310,12 @@ You can also set notifications by the event that originated them.
 
 ## Search
 
-[Figure 11 - Pesquisa Simples]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/search.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/search.png" alt="Search">
+  </object>
+</figure>
+[Figure 11 - search]
 
 You can search all the knowledge base or only the knowledge that is assigned to you. The user can search by full-text, subsets and metadata.
 Since some documents are just links to content areas, the system has the ability to crawl to those links for indexing.
@@ -269,11 +324,21 @@ Since some documents are just links to content areas, the system has the ability
 
 My Knowledge is all the folders and documents that are assigned to a user. It is the subset of all the knowledge that a specific user has associated with him. Inside that subset, the user has the obligation to read all the documents marked as mandatory.
 
-[Figure 12 - Webpart do meu conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge-webpart.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge-webpart.png" alt="My knowledge webpart">
+  </object>
+</figure>
+[Figure 12 - my knowledge webpart]
 
 In the figure above - webpart of My Knowledge, the user has access to his knowledge and notifications about what he must read next. He also has a direct link to the Global Knowledge Map, and he can apply filters as mandatory documents, etc.. The user can easily access the content by pressing the link.
 
-[Figure 13 - Sistema de Gestão do Conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-management-center.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-management-center.png" alt="Knowledge management center">
+  </object>
+</figure>
+[Figure 13 - knowledge management center]
 
 As we can verify in the figure above, all the system has as its objective to help the user to manage his knowledge with the minimum effort possible.
 Everything that the system can make to help the user, it will make available in a direct, adapted to the users context. All the interface is extremely simple with a intuitive and easy navigation.
@@ -293,15 +358,10 @@ The user can put all his knowledge map off-line.
 ### Management Reports
 
 - List off all the users that passed the due date - lists all the users that did not read the documentation in the defined time.
-
 - List all users with training needs - lists all the users that failed the surveys more than once.
-
 - List documents with lowest rating - allows to verify the documents that the users rated as with poor content.
-
 - List all the documents for revision - lists all the documents that need revision ordered by dependency.
-
 - List documents with expired reviewing date - the documents to be reviewed have a limit date to be reviewed also. In case the knowledge manager does not review the document in time, is manager will be notified and like any document it needs a justification and the reviewing date can be extended.
-
 - Lists attributions made by specific users - this lists all the attributions made by knowledge managers.
 
 ## Subscriptions
@@ -310,7 +370,12 @@ The Knowledge Management System stores and controls knowledge, but who attribute
 Attributions can be made directly to elements or to groups.
 It is possible to assign knowledge to the Everyone group that represent everyone.
 
-[Figure 14 - Atribuição de Conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution.png" alt="Knowledge attribution">
+  </object>
+</figure>
+[Figure 14 - knowledge attribution]
 
 All the systems can be configured attribute knowledge to users or groups.
 In the figure below, you can see all the knowledge that was assigned by each service to the user A.
@@ -318,11 +383,21 @@ In the figure below, you can see all the knowledge that was assigned by each ser
 - Service B attributed the Document B to User A as mandatory.
 - Service C attributed the Folder H to the User A as mandatory.
 
-[Figure 15 - Atribuição de Conhecimento por Serviço]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-services.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-services.png" alt="Knowledge attribution by services">
+  </object>
+</figure>
+[Figure 15 - knowledge attribution by services]
 
 The result of the attribution can be observed in the Figure 16, where you can verify the zone where the knowledge intercepts with different mandatory levels.
- 
-[Figure 16 - Atribuição de conhecimento no contexto do Utilizador]
+
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-user-context.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-user-context.png" alt="Knowledge attribution by user context">
+  </object>
+</figure>
+[Figure 16 - knowledge attribution by user context]
 
 The document assumes always the highest mandatory level.
 When the Service A assigns the Folder C, all the sub-folders are also assigned assigned to the user.
@@ -339,13 +414,23 @@ The Knowledge Management System checks daily the knowledge assigned to all users
 The system always selects questions that where not asked yet. The user has a limited amount of time to answer the questions.
 When the system asked all the questions, all the questions will be clear again to be assigned.
 
-[Figure 17 - Atribuição dinâmica de questionários]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/dynamic-survey-generation.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/dynamic-survey-generation.png" alt="Dynamic survey generation">
+  </object>
+</figure>
+[Figure 17 - dynamic survey generation]
 
 Everyday the user gets in its private area a set of questions, these questions are of multiple choice and fast to answer (if the user really learned and remembers the content).
 Each question has always the link to the document that contains the answer, the goal of the questions is to make sure that the user corrects and updates any knowledge that might be corrupted. 
 When the user fails the question, the system indicates the correct answer and marks the related document to be reviewed.
 
-[Figure 18 - Questionário de Conhecimento]
+<figure class="svg-figure">
+  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-survey.svg">
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-survey.png" alt="Knowledge survey">
+  </object>
+</figure>
+[Figure 18 - knowledge survey]
 
 The user has a predefined time to answer the questions that are assigned to him, this time limit exist to ensure that the user continues with the correct knowledge over time.
 Everyday new questions are added to his survey.
