@@ -1,4 +1,4 @@
-//Update for Sidemode in IE 10 in Windows 8.
+/* Update for Sidemode in IE 10 in Windows 8. */
 @-ms-viewport{
     width: device-width;
 }
