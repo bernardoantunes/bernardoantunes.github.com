@@ -16,7 +16,10 @@ layout: default
         </section>
 
         <script type="text/javascript">
-            $("#welcomeMessage > div > p").fitText(0.7125);
+            if (userAgent.search("android") > -1)
+                $("#welcomeMessage > div > p").fitText(0.7125);
+            else
+                $("#welcomeMessage > div > p").fitText(0.70);
         </script>
 
         {% include lastest-projects.html %}
