@@ -17,8 +17,10 @@ layout: default
 
         <script type="text/javascript">
             if (navigator.userAgent.search("android") > -1)
+            {
                 $("#welcomeMessage > div > p").fitText(0.73);
                 alert(navigator.userAgent);
+            }
             else
                 $("#welcomeMessage > div > p").fitText(0.68);
         </script>
