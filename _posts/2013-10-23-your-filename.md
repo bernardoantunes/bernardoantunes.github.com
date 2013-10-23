@@ -1,5 +1,13 @@
 ---
 published: false
+layout: post
+byline: A solution to the intricacies of volatile polymorphic knowledge
+category: Worktime Stories
+draft: false
+tags: 
+  - Human Resources
+  - Knowledge Management
+  - Event Driven Architecture
 ---
 
 ## A New Post
