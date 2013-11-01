@@ -1,7 +1,7 @@
-auto: false
 auto: true
-server: false
+safe: true
 lsi: false
+server: false
 pygments: true
 permalink: /notes/:title
 paginate: 10
