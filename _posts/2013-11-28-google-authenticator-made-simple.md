@@ -21,7 +21,7 @@ Google's two-way factor authentication is in fact very convenient and easy to us
 You can receive an SMS with the code to use, or have an app in your phone that is generating new codes that you can use to complete your authentication process.
 
 <figure>
-  <img src="C:\Projects\GitHub\bernardoantunes.github.com/img/posts/google-authenticator-made-simple/current-ios-interface.png" alt="Current iOS Interface">
+  <img src="/img/posts/google-authenticator-made-simple/current-ios-interface.png" alt="Current iOS Interface">
 </figure>
 
 When you have two-way factor authentication configured, you are required to enter a second code, if you have the Google Authenticator configured, you will have to write the code that appears in the app before the time expires.
@@ -33,7 +33,7 @@ For me, I find it just anoying have to enter a code that Google knows about in a
 So, what I propose to Google for the next version of the Google Authenticator is this:
 
 <figure class="svg-figure">
-  <img src="C:\Projects\GitHub\bernardoantunes.github.com/img/posts/google-authenticator-made-simple/proposed-ios-interface.png" alt="Proposed iOS Interface">
+  <img src="/img/posts/google-authenticator-made-simple/proposed-ios-interface.png" alt="Proposed iOS Interface">
 </figure>
 
 The interface looks almost the same just with two new buttons, but in fact is a completly new concept.
