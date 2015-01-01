@@ -24,9 +24,7 @@ Let me explain why this is so important for any company to manage their own know
 When we talk about human resources, the first and most important piece is the person, that I in a company context is referred as employee, co-worker or collaborator, I will call it collaborator.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/you.svg">
-    <img src="/img/posts/dynamic-skills-management/you.png" alt="You">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/you.svg" alt="You">
 </figure>
 
 This is You (it is his name :)) and he represents the collaborator.
@@ -41,9 +39,7 @@ It doesn't look very important to have all the roles or all the activities well 
 If you are one of the companies that have none or partial data, I am going to show you how lost you might be without noticing.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/roles-activities-skills.svg">
-    <img src="/img/posts/dynamic-skills-management/roles-activities-skills.png" alt="Roles, Activities and Skills">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/roles-activities-skills.svg" alt="Roles, Activities and Skills">
 </figure>
 
 Note: I did not even started to write the article and I am most sure that you already can recall one or more companies that don't have all the roles defined and/or the activities that each collaborator must perform. Even the most organized companies forget one of the most basic roles that every collaborator have that is "Colaborator" or "Employee" that has the basic activities like fill time-sheets, private information management, etc.... continuing! :)
@@ -58,9 +54,7 @@ With the complete list of roles, activities and skills, we are going to associat
 To do that we need to have to test the knowledge and gradate the skills for each collaborator.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/tests-eval-levels.svg">
-    <img src="/img/posts/dynamic-skills-management/tests-eval-levels.png" alt="Tests, evaluation and level">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/tests-eval-levels.svg" alt="Tests, evaluation and level">
 </figure>
 
 Now we know who each collaborator is, where he fits in the company, what are the tasks that he has to perform, with which skills and what is his level of competence. We also know if the collaborator have the right skills level and where we have to work to update his knowledge. This is essential to improve efficiency and reduce risk.
@@ -70,9 +64,7 @@ Now we know who each collaborator is, where he fits in the company, what are the
 Projects are dynamic composed activities. When we are designing a project, we need to define the activities, skills and skill level necessary for a successful delivery. Because we have the correct assessment made to our collaborators, we can easily assign the correct elements. If we don't have them, we can choose to upgrade them, contract or subcontract, but we have the knowledge to decide.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/project-needs.svg">
-    <img src="/img/posts/dynamic-skills-management/project-needs.png" alt="Project Needs">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/project-needs.svg" alt="Project Needs">
 </figure>
 
 Until here, we discussed the basic needs of a company to be able to recruit, execute daily activities and to be able to create and execute projects reliably.
@@ -83,9 +75,7 @@ Although knowing the current knowledge level and being able to correct it, it do
 To get to that value, we need to have to valuate each skill level, the skills that are the most important to your company will have higher value and the skills that we are stopping needing will have a lower value. And of course, the skills that you don't need will have no value.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/you-profiled.svg">
-    <img src="/img/posts/dynamic-skills-management/you-profiled.png" alt="You Profiled">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/you-profiled.svg" alt="You Profiled">
 </figure>
 
 You might argue that this value is completely relative and tells us nothing about how this collaborator is relative to all the others in the company.
@@ -104,9 +94,7 @@ This is a big problem to any company, because it is very expensive to substitute
 So we introduce to the collaborators a career, giving them a visible career so that they can easily visualize themselves moving forward. Because with a visible path they get motivated to learn more and maintain myself updated.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/company-careers.svg">
-    <img src="/img/posts/dynamic-skills-management/company-careers.png" alt="Company Careers">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/company-careers.svg" alt="Company Careers">
 </figure>
 
 Well, all companies have careers. True, but although they have careers, most of the collaborators feel that they have no control over their progression. That happens because most companies have their promotion decision methods hidden under subjective and corruptible methods.
@@ -129,9 +117,7 @@ Predetermined careers are only a set of preset paths that the collaborators can 
 Every role is at a measurable distance from you based on your current skills and the required skills to all the others.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/distance-from-you.svg">
-    <img src="/img/posts/dynamic-skills-management/distance-from-you.png" alt="Distance from You">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/distance-from-you.svg" alt="Distance from You">
 </figure>
 
 (add to the data estimated time to learn a skill)
@@ -147,9 +133,7 @@ Having a career defined by yourself, with the steps necessary to achieve your go
 Now it is time to introduce the concept of a sponsor or a mentor. A mentor is an element in the company that knows about the position that you want to be in the future and will help you to get there. See it like your personal trainer in the gym, that person that does motivates you and helps you to do more, be more and teaches you how to get to the next level.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/you-with-sponsor.svg">
-    <img src="/img/posts/dynamic-skills-management/you-with-sponsor.png" alt="You with Sponsor">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/you-with-sponsor.svg" alt="You with Sponsor">
 </figure>
 
 Note: the mentor concepts helps to create a sense of unity in the company, because you will have more people that are thankful and proud from each other.
@@ -164,9 +148,7 @@ But the reality is that the company has its own path, static companies are somet
 The skills that you need next year will probably be different than the ones that you currently have, and knowing what you are going to need next period is very important so that every element gets prepared before the battle.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/company-strategy.svg">
-    <img src="/img/posts/dynamic-skills-management/company-strategy.png" alt="Company Strategy">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/company-strategy.svg" alt="Company Strategy">
 </figure>
 
 When scoring the skills per role, the company gives two values to each skill, one for the current period and another to the next.
@@ -178,9 +160,7 @@ The next period skills values are very important to define because it makes adju
 This solution corrects the problem that I call death by obsoletion.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/death-by-obsoletion.svg">
-    <img src="/img/posts/dynamic-skills-management/death-by-obsoletion.png" alt="Death by Obsoletion">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/death-by-obsoletion.svg" alt="Death by Obsoletion">
 </figure>
 
 Death by Obsoletion happens when the value of a collaborator decreases so much that it does not justifies his salary anymore.
@@ -198,7 +178,5 @@ People are willing to learn and change, if they feel that that change benefits t
 Every collaborator wants and can grow with the company, learning does not stop at the universities nor when you got your job, that was the past, knowledge management is essential to any company that wants to have success in a fast, highly dynamic, highly competitive world.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/dynamic-skills-management/grow-with-the-company.svg">
-    <img src="/img/posts/dynamic-skills-management/grow-with-the-company.png" alt="Grow with the Company">
-  </object>
+    <img src="/img/posts/dynamic-skills-management/grow-with-the-company.svg" alt="Grow with the Company">
 </figure>

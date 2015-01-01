@@ -173,9 +173,7 @@ Knowledge in its broader definition is everything, even the hardware systems are
 In a company everything is knowledge and everything creates knowledge. Every system or human, has the ability to create, transform and exchange knowledge.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/source-of-knowledge.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/source-of-knowledge.png" alt="Source of knowledge">
-  </object>
+	<img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/source-of-knowledge.svg" alt="Source of knowledge">
 </figure>
 
 ##Amount of knowledge
@@ -184,9 +182,7 @@ Although essential, knowledge can easily became too heavy and difficult to manag
 If we assign to a specific element more knowledge than he really needs to the execution of his functions, we will be expending more energy than necessary without added value, it will be more difficult to maintain him updated, and the probability of forgetting important details increases substantially.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge.png" alt="My Knowledge">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge.svg" alt="My Knowledge">
 </figure>
 
 #Actors
@@ -225,9 +221,7 @@ When you give to a person new rules that are similar but not the same, probably 
 (Knowledge dependencies, if you don't have the foundations, you will not be able to build upon them.)
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/how-the-absorption-is-done.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/how-the-absorption-is-done.png" alt="How the absorption is done">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/how-the-absorption-is-done.svg" alt="How the absorption is done">
 </figure>
 
 We can conclude that, the individual is only a part of what defines a company, but it is an essential element of the global information system that needs to be perfectly updated so that everything works correctly.
@@ -238,9 +232,7 @@ The Information Systems have been the most forgotten intervener in knowledge, bu
 This is without a doubt the missed element by almost all the knowledge management systems, and it is precisely here where we will make our system fully functional.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-lost-in-systems.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-lost-in-systems.png" alt="Knowledge lost in systems">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-lost-in-systems.svg" alt="Knowledge lost in systems">
 </figure>
 
 # Knowledge Management
@@ -254,9 +246,7 @@ But what he is expected to know he needs to know 100% (or very close to it).
 Now that we have introduced the Actors in story, lets introduce the roles that they will need to perform.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/roles-in-knowledge.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/roles-in-knowledge.png" alt="Roles in knowledge">
-  </object>
+	<img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/roles-in-knowledge.svg" alt="Roles in knowledge">
 </figure>
 
 ### User
@@ -297,9 +287,7 @@ The Knowledge Management System integrates automatically with all the events tha
 Any company to be efficient, needs that 80% its knowledge management is done automatically and managed by its internal systems.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/automatic-knowledge-assignment.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/automatic-knowledge-assignment.png" alt="Automatic knowledge assignment">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/automatic-knowledge-assignment.svg" alt="Automatic knowledge assignment">
 </figure>
 
 ## Knowledge Synchronization
@@ -311,18 +299,14 @@ Knowledge propagation is something that has to be synchronized, there should not
 The knowledge propagation system needs to be centralized to minimize message deturpation.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-chain-propagation.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-chain-propagation.png" alt="Knowledge chain propagation">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-chain-propagation.svg" alt="Knowledge chain propagation">
 </figure>
 1 -> 0.9 -> 0.8 -> 0.6
 
 You can see in the figure above, the quality of knowledge degrades with each link of knowledge propagation.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-centralized-propagation.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-centralized-propagation.png" alt="Knowledge centralized propagation">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-centralized-propagation.svg" alt="Knowledge centralized propagation">
 </figure>
 1 -> 0.9
 
@@ -351,17 +335,13 @@ The Document is the main unit of the knowledge management system. The document i
 - Survey - each document has a set of questions with multiple answers that are used to verify if the user understood its content.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/survey.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/survey.png" alt="Survey">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/survey.svg" alt="Survey">
 </figure>
 
 - Dependency
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/document-dependencies.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/document-dependencies.png" alt="Document dependencies">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/document-dependencies.svg" alt="Document dependencies">
 </figure>
 
 We can verify in the figure above that any document can have a dependency on zero or more documents. This dependency system is essential to maintain the consistency between documents warning to review all dependent documents.
@@ -404,9 +384,7 @@ You can also set notifications by the event that originated them.
 ## Search
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/search.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/search.png" alt="Search">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/search.svg" alt="Search">
 </figure>
 
 You can search all the knowledge base or only the knowledge that is assigned to you. The user can search by full-text, subsets and metadata.
@@ -417,17 +395,13 @@ Since some documents are just links to content areas, the system has the ability
 My Knowledge is all the folders and documents that are assigned to a user. It is the subset of all the knowledge that a specific user has associated with him. Inside that subset, the user has the obligation to read all the documents marked as mandatory.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge-webpart.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge-webpart.png" alt="My knowledge webpart">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/my-knowledge-webpart.svg" alt="My knowledge webpart">
 </figure>
 
 In the figure above - webpart of My Knowledge, the user has access to his knowledge and notifications about what he must read next. He also has a direct link to the Global Knowledge Map, and he can apply filters as mandatory documents, etc.. The user can easily access the content by pressing the link.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-management-center.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-management-center.png" alt="Knowledge management center">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-management-center.svg" alt="Knowledge management center">
 </figure>
 
 As we can verify in the figure above, all the system has as its objective to help the user to manage his knowledge with the minimum effort possible.
@@ -461,9 +435,7 @@ Attributions can be made directly to elements or to groups.
 It is possible to assign knowledge to the Everyone group that represent everyone.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution.png" alt="Knowledge attribution">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution.svg" alt="Knowledge attribution">
 </figure>
 
 All the systems can be configured attribute knowledge to users or groups.
@@ -473,17 +445,13 @@ In the figure below, you can see all the knowledge that was assigned by each ser
 - Service C attributed the Folder H to the User A as mandatory.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-services.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-services.png" alt="Knowledge attribution by services">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-services.svg" alt="Knowledge attribution by services">
 </figure>
 
 The result of the attribution can be observed in the Figure 16, where you can verify the zone where the knowledge intercepts with different mandatory levels.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-user-context.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-user-context.png" alt="Knowledge attribution by user context">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-attribution-by-user-context.svg" alt="Knowledge attribution by user context">
 </figure>
 
 The document assumes always the highest mandatory level.
@@ -502,9 +470,7 @@ The system always selects questions that where not asked yet. The user has a lim
 When the system asked all the questions, all the questions will be clear again to be assigned.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/dynamic-survey-generation.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/dynamic-survey-generation.png" alt="Dynamic survey generation">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/dynamic-survey-generation.svg" alt="Dynamic survey generation">
 </figure>
 
 Everyday the user gets in its private area a set of questions, these questions are of multiple choice and fast to answer (if the user really learned and remembers the content).
@@ -512,9 +478,7 @@ Each question has always the link to the document that contains the answer, the 
 When the user fails the question, the system indicates the correct answer and marks the related document to be reviewed.
 
 <figure class="svg-figure">
-  <object type="image/svg+xml" data="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-survey.svg">
-    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-survey.png" alt="Knowledge survey">
-  </object>
+    <img src="/img/posts/knowledge-management-center-and-dynamic-learning-system/knowledge-survey.svg" alt="Knowledge survey">
 </figure>
 
 The user has a predefined time to answer the questions that are assigned to him, this time limit exist to ensure that the user continues with the correct knowledge over time.
