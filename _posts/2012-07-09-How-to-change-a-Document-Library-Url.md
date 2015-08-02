@@ -44,9 +44,9 @@ On the library, select “Library” in the Ribbon and then the option “Open w
 
 Then go up one folder and rename through Windows Explorer the name of the library from “Façade” to “Facade”.
 
-[![Rename through Windows Explorer][D2]][D1]
 [D1]: /img/posts/how-to-change-a-document-library-url/rename-through-windows-explorer.png
 [D2]: /img/posts/how-to-change-a-document-library-url/rename-through-windows-explorer-thumb.png "Rename through Windows Explorer"
+[![Rename through Windows Explorer][D2]][D1]
 
 This will change both the Url and the Display Name to “Facade”.
 
