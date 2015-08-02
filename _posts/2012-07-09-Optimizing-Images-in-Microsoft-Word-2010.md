@@ -21,23 +21,23 @@ I will start creating a document named “Optimizing Images in Microsoft Word 20
 
 Now I do a print screen and paste it in the document.
 
+[A1]: /img/posts/optimizing-images-in-microsoft-word-2010/print-screen-and-paste-it-in-the-document.png
+[A2]: /img/posts/optimizing-images-in-microsoft-word-2010/print-screen-and-paste-it-in-the-document-thumb.png "Print screen and paste it in the document"
 [![Print screen and paste it in the document][A2]][A1]
-  [A1]: /img/posts/optimizing-images-in-microsoft-word-2010/print-screen-and-paste-it-in-the-document.png
-  [A2]: /img/posts/optimizing-images-in-microsoft-word-2010/print-screen-and-paste-it-in-the-document-thumb.png (Print screen and paste it in the document)
 
 Just doing this, the document will have a file size of 356KB. It is not much, but normally we have dozens of images in one document.
 
 Now I will Crop the image using Work Crop options.
 
+[B1]: /img/posts/optimizing-images-in-microsoft-word-2010/crop-the-image-using-work-crop-options.png
+[B2]: /img/posts/optimizing-images-in-microsoft-word-2010/crop-the-image-using-work-crop-options-thumb.png "Crop the image using Work Crop options"
 [![Crop the image using Work Crop options][B2]][B1]
-  [B1]: /img/posts/optimizing-images-in-microsoft-word-2010/crop-the-image-using-work-crop-options.png
-  [B2]: /img/posts/optimizing-images-in-microsoft-word-2010/crop-the-image-using-work-crop-options-thumb.png (Crop the image using Work Crop options)
 
 I will get the result I want as you can see below…
 
+[C1]: /img/posts/optimizing-images-in-microsoft-word-2010/result-image-cropped-using-work-crop-options.png
+[C2]: /img/posts/optimizing-images-in-microsoft-word-2010/result-image-cropped-using-work-crop-options-thumb.png "Result image using Work Crop options"
 [![Result image using Work Crop options][C2]][C1]
-  [C1]: /img/posts/optimizing-images-in-microsoft-word-2010/result-image-cropped-using-work-crop-options.png
-  [C2]: /img/posts/optimizing-images-in-microsoft-word-2010/result-image-cropped-using-work-crop-options-thumb.png (Result image using Work Crop options)
 
 …but the file size didn’t decrease, it has kept its original 356KB file size even with this much smaller image.
 
@@ -49,9 +49,9 @@ To do that you have to select the image, then Picture Tools –> Format and sele
 
 You be prompted with this options:
 
+[D1]: /img/posts/optimizing-images-in-microsoft-word-2010/compress-pictures-in-the-adjust-group-prompt.png
+[D2]: /img/posts/optimizing-images-in-microsoft-word-2010/compress-pictures-in-the-adjust-group-prompt-thumb.png "Compress Pictures in the Adjust Group"
 [![Compress Pictures in the Adjust Group][D2]][D1]
-  [D1]: /img/posts/optimizing-images-in-microsoft-word-2010/compress-pictures-in-the-adjust-group-prompt.png
-  [D2]: /img/posts/optimizing-images-in-microsoft-word-2010/compress-pictures-in-the-adjust-group-prompt-thumb.png (Compress Pictures in the Adjust Group)
 
 Depending on your scenario, you select different options, but for our demonstration, I will select the options above.
 
@@ -65,45 +65,45 @@ Suppose that we would like to create the user manual for an application, so we n
 
 We create a new document and paste the same image, returning to the 356KB file.
 
+[E1]: /img/posts/optimizing-images-in-microsoft-word-2010/new-document-and-paste-the-same-image.png
+[E2]: /img/posts/optimizing-images-in-microsoft-word-2010/new-document-and-paste-the-same-image-thumb.png "New document and paste the same image"
 [![New document and paste the same image][E2]][E1]
-  [E1]: /img/posts/optimizing-images-in-microsoft-word-2010/new-document-and-paste-the-same-image.png
-  [E2]: /img/posts/optimizing-images-in-microsoft-word-2010/new-document-and-paste-the-same-image-thumb.png (New document and paste the same image)
 
 Now, we want to explain the different areas in the interface, so we copy paste the original image two times and crop to the following zones:
 
 Area 1 – The Ribbon
 
+[F1]: /img/posts/optimizing-images-in-microsoft-word-2010/area-1-the-ribbon.png
+[F2]: /img/posts/optimizing-images-in-microsoft-word-2010/area-1-the-ribbon-thumb.png "Area 1 – The Ribbon"
 [![Area 1 - The Ribbon][F2]][F1]
-  [F1]: /img/posts/optimizing-images-in-microsoft-word-2010/area-1-the-ribbon.png
-  [F2]: /img/posts/optimizing-images-in-microsoft-word-2010/area-1-the-ribbon-thumb.png (Area 1 – The Ribbon)
 
 Area 2 - Post Properties Window
 
+[G1]: /img/posts/optimizing-images-in-microsoft-word-2010/area-2-post-properties-window.png
+[G2]: /img/posts/optimizing-images-in-microsoft-word-2010/area-2-post-properties-window-thumb.png "Area 2 - Post Properties Window"
 [![Area 2 - Post Properties Window][G2]][G1]
-  [G1]: /img/posts/optimizing-images-in-microsoft-word-2010/area-2-post-properties-window.png
-  [G2]: /img/posts/optimizing-images-in-microsoft-word-2010/area-2-post-properties-window-thumb.png (Area 2 - Post Properties Window)
 
 And we get with a document looking like this:
 
+[H1]: /img/posts/optimizing-images-in-microsoft-word-2010/we-get-with-a-document-looking-like-this.png
+[H2]: /img/posts/optimizing-images-in-microsoft-word-2010/we-get-with-a-document-looking-like-this-thumb.png "We get with a document looking like this"
 [![We get with a document looking like this][H2]][H1]
-  [H1]: /img/posts/optimizing-images-in-microsoft-word-2010/we-get-with-a-document-looking-like-this.png
-  [H2]: /img/posts/optimizing-images-in-microsoft-word-2010/we-get-with-a-document-looking-like-this-thumb.png (We get with a document looking like this)
 
 After saving the document has a file size of 357KB, we have now 2 more images being displayed in the document and the increase in the file size was 1KB.
 
 And the best thing is that we still have the option to adjust any of the cropping setting of the images. As we see below.
 
+[I1]: /img/posts/optimizing-images-in-microsoft-word-2010/we-still-have-the-option-to-adjust.png
+[I2]: /img/posts/optimizing-images-in-microsoft-word-2010/we-still-have-the-option-to-adjust-thumb.png "We still have the option to adjust"
 [![We still have the option to adjust][I2]][I1]
-  [I1]: /img/posts/optimizing-images-in-microsoft-word-2010/we-still-have-the-option-to-adjust.png
-  [I2]: /img/posts/optimizing-images-in-microsoft-word-2010/we-still-have-the-option-to-adjust-thumb.png (We still have the option to adjust)
 
 Now we are ready to see why we should not always select the option “Delete cropped areas of pictures”.
 
 We will now again select the Picture Tools –> Format and select the Compress Pictures in the Adjust Group.
 
+[J1]: /img/posts/optimizing-images-in-microsoft-word-2010/unselect-the-the-option-apply-only-to-this-picture.png
+[J2]: /img/posts/optimizing-images-in-microsoft-word-2010/unselect-the-the-option-apply-only-to-this-picture-thumb.png "Unselect the the option "Apply only to this picture""
 [![Unselect the the option \"Apply only to this picture\"][J2]][J1]
-  [J1]: /img/posts/optimizing-images-in-microsoft-word-2010/unselect-the-the-option-apply-only-to-this-picture.png
-  [J2]: /img/posts/optimizing-images-in-microsoft-word-2010/unselect-the-the-option-apply-only-to-this-picture-thumb.png (Unselect the the option \"Apply only to this picture\")
 
 But this time we will unselect the the option “Apply only to this picture”, this way the command will be applied to all the images in the document, make sure that the option “Delete cropped areas of pictures” is selected.
 
