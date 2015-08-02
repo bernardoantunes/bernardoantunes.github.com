@@ -2,7 +2,7 @@
 layout: post
 title: Optimizing Images in Microsoft Word 2010
 byline: Even an option called "Compress Pictures" can make the document bigger
-category: Worktime Stories
+category: Professional
 tags:
 - Microsoft Word
 ---

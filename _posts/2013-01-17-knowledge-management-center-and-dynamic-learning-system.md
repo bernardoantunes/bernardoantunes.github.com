@@ -2,7 +2,7 @@
 layout: post
 title: Knowledge Management Center and Dynamic Learning System - Draft
 byline: A solution to the intricacies of volatile polymorphic knowledge
-category: Worktime Stories
+category: Professional
 draft: false
 tags:
 - Human Resources

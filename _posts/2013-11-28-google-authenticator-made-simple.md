@@ -2,7 +2,7 @@
 layout: post
 title: Google Authenticator Made Simple
 byline: Can it be simpler?
-category: Down to Tech
+category: Professional
 tags:
 - Authentication
 - UX

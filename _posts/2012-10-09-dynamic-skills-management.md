@@ -2,7 +2,7 @@
 layout: post
 title: Dynamic Skills Management
 byline: Do You have the Skills?
-category: Worktime Stories
+category: Professional
 tags:
 - Human Resources
 - Knowledge Management

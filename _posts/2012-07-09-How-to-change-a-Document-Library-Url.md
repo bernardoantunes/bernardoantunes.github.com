@@ -2,7 +2,7 @@
 layout: post
 title: How to change a Document Library Url
 byline: The Easy Way
-category: Down to Tech
+category: Professional
 tags:
 - SharePoint
 ---
