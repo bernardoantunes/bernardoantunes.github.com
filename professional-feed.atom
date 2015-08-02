@@ -12,6 +12,7 @@
 		<email>myself@bernardoantunes.com</email>
 	</author>
 	{% for post in site.posts %}
+		{% if post.category == "Professional" %}
 	<entry>
 		<title>{{ post.title }}</title>
 		<link href="http://bernardoantunes.com{{ post.url }}"/>
@@ -19,5 +20,6 @@
 		<id>http://bernardoantunes.com{{ post.id }}</id>
 		<content type="html">{{ post.content | xml_escape }}</content>
 	</entry>
+		{% endif %}
 	{% endfor %}
 </feed>
